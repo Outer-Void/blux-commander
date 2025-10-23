@@ -1,0 +1,17 @@
+#cockpit {
+    layout: grid;
+    grid-size: 1 2;
+    grid-columns: 30% 70%;
+}
+
+#right {
+    layout: vertical;
+    height: 100%;
+}
+
+#reflection {
+    dock: bottom;
+    padding: 1;
+    background: $accent;
+    color: $text;
+}

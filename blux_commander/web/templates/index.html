@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BLUX Commander</title>
+    <link rel="stylesheet" href="/static/assets/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>BLUX Commander</h1>
+      <p>The bridge between mind and machine. The map that moves.</p>
+      <section>
+        <h2>Subsystem Status</h2>
+        <ul>
+          {% for name, status in subsystems.items() %}
+          <li><strong>{{ name }}</strong>: {{ status }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

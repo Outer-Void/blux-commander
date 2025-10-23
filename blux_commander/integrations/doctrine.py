@@ -1,0 +1,11 @@
+"""Doctrine integration stub."""
+
+from __future__ import annotations
+
+from blux_commander.core import commander
+
+
+def register() -> None:
+    """Register the Doctrine integration with the commander."""
+
+    commander.register_subsystem("doctrine", "idle")

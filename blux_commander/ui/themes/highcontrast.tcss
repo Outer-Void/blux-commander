@@ -1,0 +1,9 @@
+* {
+    color: #ffffff;
+    background: #000000;
+}
+
+#reflection {
+    background: #ff00ff;
+    color: #000000;
+}

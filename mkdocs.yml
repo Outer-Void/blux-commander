@@ -1,0 +1,31 @@
+site_name: BLUX Commander Docs
+site_description: Enterprise developer cockpit for the BLUX ecosystem
+repo_url: https://github.com/blux/blux-commander
+nav:
+  - Home: index.md
+  - Architecture: ARCHITECTURE.md
+  - Install: INSTALL.md
+  - Operations: OPERATIONS.md
+  - Security: SECURITY.md
+  - Integrations: INTEGRATIONS.md
+  - API: API.md
+  - Configuration: CONFIGURATION.md
+  - Telemetry & Troubleshooting:
+      - Telemetry Themes: THEMES.md
+      - Troubleshooting: TROUBLESHOOTING.md
+  - Roadmap: ROADMAP.md
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.tracking
+    - toc.integrate
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
