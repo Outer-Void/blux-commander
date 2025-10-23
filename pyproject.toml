@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blux-commander"
+version = "0.1.0"
+description = "BLUX Commander — Developer & AI Orchestration Cockpit for the BLUX Ecosystem"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "BLUX", email = "ops@blux.systems" }]
+keywords = ["cli", "tui", "ai", "developer-tools", "blux"]
+
+dependencies = [
+  "typer>=0.12.3",
+  "textual>=0.62.0",
+  "rich>=13.7.0",
+  "psutil>=5.9.8",
+  "pyyaml>=6.0.1",
+  "sqlite-utils>=3.36",
+  "fastapi>=0.115.0",
+  "uvicorn>=0.30.0",
+  "prometheus-client>=0.20.0",
+  "jinja2>=3.1.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "mypy", "ruff", "mkdocs-material"]
+
+[project.scripts]
+bluxq = "blux_commander.cli:app"
+
+[project.entry-points."blux.plugins"]
+cmd = "blux_commander.cli:get_app"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.mypy]
+python_version = "3.9"
+strict = false
+warn_return_any = true
+warn_unused_configs = true
