@@ -26,7 +26,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "mypy", "ruff", "mkdocs-material"]
+dev = ["pytest", "mypy", "ruff", "mkdocs-material", "httpx>=0.27"]
 
 [project.scripts]
 bluxq = "blux_commander.cli:app"
