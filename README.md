@@ -111,3 +111,18 @@ bluxq cmd dashboard
 ```
 
 See the [documentation](docs/index.md) for installation, operations, and integration details.
+
+## Licensing
+
+BLUX Commander is dual-licensed. For open-source use, it is available under the Apache License 2.0
+as described in [LICENSE-APACHE](LICENSE-APACHE) and the accompanying [NOTICE](NOTICE). Commercial
+or proprietary use requires a separate agreement under the terms in
+[LICENSE-COMMERCIAL](LICENSE-COMMERCIAL).
+
+### Open-source (Apache-2.0)
+You may use, modify, and distribute the project under the Apache License 2.0, provided you include
+the required notices and comply with the terms outlined in [LICENSE-APACHE](LICENSE-APACHE).
+
+### Commercial licensing
+If you want to embed, distribute, or monetize BLUX Commander beyond what Apache-2.0 permits, you
+must obtain a commercial license. Contact theoutervoid@outlook.com to discuss terms.
