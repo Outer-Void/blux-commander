@@ -128,3 +128,9 @@ uvicorn blux_commander.web.server:app --reload
 
 The server stores authentication keys, command memory, and repository metadata under
 `~/.config/blux-commander`. Open <http://127.0.0.1:8000/> to access the React + Tailwind UI.
+
+## Scope / Non-goals
+
+BLUX Commander is a read-only observability cockpit. It is **not a control plane** and performs **no
+execution**, **no enforcement**, and **no tokens**. See [docs/ROLE.md](docs/ROLE.md) for the full
+scope and boundary checks.
