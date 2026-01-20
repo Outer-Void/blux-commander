@@ -11,6 +11,12 @@ requires-python = ">=3.9"
 license = { text = "Apache-2.0" }
 authors = [{ name = "BLUX", email = "ops@blux.systems" }]
 keywords = ["cli", "tui", "ai", "developer-tools", "blux"]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+]
 
 dependencies = [
   "typer>=0.12.3",
@@ -48,3 +54,6 @@ python_version = "3.9"
 strict = false
 warn_return_any = true
 warn_unused_configs = true
+
+[tool.setuptools]
+license-files = ["LICENSE", "LICENSE-APACHE", "LICENSE-COMMERCIAL", "NOTICE"]
