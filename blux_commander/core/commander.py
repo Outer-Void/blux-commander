@@ -63,9 +63,8 @@ def print_status(*, verbose: bool = False) -> None:
 def bootstrap() -> None:
     """Initialize default subsystem entries."""
 
-    register_subsystem("lite", "idle")
-    register_subsystem("guard", "idle")
-    register_subsystem("doctrine", "idle")
-    register_subsystem("quantum", "connected")
-    register_subsystem("ca", "listening")
-    register_subsystem("reg", "synchronized")
+    register_subsystem("traces", "idle")
+    register_subsystem("audits", "idle")
+    register_subsystem("execution_manifest", "pending")
+    register_subsystem("guard_receipt", "pending")
+    register_subsystem("envelope", "queued")

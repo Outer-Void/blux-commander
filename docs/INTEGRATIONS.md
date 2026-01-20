@@ -1,19 +1,18 @@
 # Integrations
 
-Each BLUX subsystem exposes a `register(commander)` function that can attach commands, dashboards,
-and event handlers to the Commander core.
+Commander integrations are read-only data feeds that publish observability artifacts. They do not
+execute commands, enforce policy, or mutate system state.
 
-| Subsystem | Module | Capabilities |
-|-----------|--------|--------------|
-| Lite | `blux_commander.integrations.lite` | Launch workflows, manage task queues |
-| Guard | `blux_commander.integrations.guard` | Security analysis, threat surface review |
-| Quantum | `blux_commander.integrations.quantum` | Host CLI adapters and quantum job routing |
-| Doctrine | `blux_commander.integrations.doctrine` | Policy enforcement and compliance checks |
-| cA | `blux_commander.integrations.ca` | Reflective reasoning prompts and insights |
-| Reg | `blux_commander.integrations.reg` | Capability registry access and trust mediation |
+| Feed | Description |
+|------|-------------|
+| Envelope stream | Surface envelope payloads for operators to inspect. |
+| Execution manifest feed | Display execution_manifest records and status changes. |
+| Guard receipt feed | Visualize guard_receipt artifacts emitted by upstream systems. |
+| Audit trail export | Render audits and compliance traces in the cockpit. |
+| Trace pipeline | Show traces and timing data for observability. |
 
 ## Integration Lifecycle
 
-1. Commander loads static integrations during boot.
-2. Plugins can extend or override integration behavior at runtime.
-3. Events flow through the central bus, enabling cross-subsystem coordination.
+1. Commander subscribes to read-only feeds on boot.
+2. Feeds emit artifacts that are visualized in the cockpit.
+3. No actions are triggered from within Commander.

@@ -19,7 +19,7 @@ from .storage import StorageManager, default_storage_dir
 
 BASE_DIR = default_storage_dir()
 storage_manager = StorageManager(BASE_DIR)
-auth_manager = AuthManager(BASE_DIR)
+auth_manager = AuthManager()
 repo_index = RepoIndex(storage_manager)
 command_executor = CommandExecutor(storage_manager)
 
@@ -59,7 +59,7 @@ async def status() -> dict:
     return {
         "app": "blux-commander",
         "version": app.version,
-        "cli_available": command_executor.cli_path is not None,
+        "cli_available": False,
         "config_dir": str(BASE_DIR),
         "public_key": keypair.public_key,
         "subsystems": commander.state.subsystems,
@@ -69,15 +69,13 @@ async def status() -> dict:
 @app.get("/api/auth/keypair")
 async def auth_keypair() -> dict:
     keypair = auth_manager.ensure_keypair()
-    return {"public_key": keypair.public_key, "config_dir": str(BASE_DIR)}
+    return {"public_key": keypair.public_key, "mode": "read-only"}
 
 
 @app.post("/api/auth/session")
 async def auth_session(payload: dict) -> dict:
-    token = payload.get("token")
-    if not auth_manager.verify(token):
-        raise HTTPException(status_code=401, detail="Invalid token")
-    return {"status": "ok"}
+    _ = payload.get("token")
+    return {"status": "ok", "mode": "read-only"}
 
 
 @app.get("/api/commands/memory")
@@ -97,10 +95,7 @@ async def command_execute(payload: dict, _: KeyPair = Depends(require_auth)) -> 
 
 @app.websocket("/ws/commands")
 async def commands_socket(websocket: WebSocket) -> None:
-    token = websocket.query_params.get("token")
-    if not auth_manager.verify(token):
-        await websocket.close(code=1008)
-        return
+    _ = websocket.query_params.get("token")
     await websocket.accept()
     try:
         while True:

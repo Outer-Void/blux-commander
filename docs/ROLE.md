@@ -10,9 +10,9 @@ control plane** and it performs **no execution**.
 BLUX Commander may only display and visualize the following artifacts:
 
 - traces
-- envelopes
-- guard_receipts
-- execution_manifests
+- envelope
+- guard_receipt
+- execution_manifest
 - audits
 - status
 

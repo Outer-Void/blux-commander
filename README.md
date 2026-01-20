@@ -8,18 +8,15 @@ The bridge between mind and machine. The map that moves.
 
 BLUX Commander delivers a unified read-only observability cockpit for the BLUX ecosystem. It is
 **not a control plane** and performs **no execution**. Developers and operators can visualize
-traces, envelopes, audits, execution manifests, guard receipts, and system status without
-triggering actions.
+traces, audits, envelope payloads, execution_manifest records, guard_receipt artifacts, and
+system status without triggering actions.
 
 ### Highlights
 
-- **Commander Core** – Chain BLUX workflows while sharing runtime context.
-- **Multi-Pane Cockpit** – Operate a Textual dashboard with terminal, logs, telemetry, and plugin panes.
-- **AI Developer Shell** – Launch sandboxed Python and system environments.
-- **Commander API** – Expose orchestration endpoints over FastAPI.
-- **Web Dashboard** – Launch a FastAPI + React cockpit with real-time command streaming.
-- **Plugin Framework** – Discover, validate, and execute external modules.
-- **Telemetry Dashboard** – Capture metrics via SQLite/JSONL and Prometheus exporters.
+- **Read-Only Commander Core** – Aggregate observability status and artifact metadata.
+- **Multi-Pane Cockpit** – Operate a Textual dashboard for logs, telemetry, and artifact views.
+- **Web Dashboard** – Serve a FastAPI + React cockpit for read-only insights.
+- **Artifact Explorer** – Visualize envelope, guard_receipt, execution_manifest, audits, and traces.
 
 <!-- FILETREE:BEGIN -->
 <details><summary><strong>Repository File Tree</strong></summary>
@@ -49,10 +46,7 @@ triggering actions.
 │   ├── integrations
 │   │   ├── ca.py
 │   │   ├── doctrine.py
-│   │   ├── guard.py
-│   │   ├── lite.py
-│   │   ├── quantum.py
-│   │   └── reg.py
+│   │   └── quantum.py
 │   ├── ui
 │   │   ├── panels
 │   │   │   ├── ai_panel.py
@@ -121,14 +115,13 @@ See the [documentation](docs/index.md) for installation, operations, and integra
 
 ### Web Dashboard
 
-Run the web orchestration dashboard locally with:
+Run the read-only web dashboard locally with:
 
 ```bash
 uvicorn blux_commander.web.server:app --reload
 ```
 
-The server stores authentication keys, command memory, and repository metadata under
-`~/.config/blux-commander`. Open <http://127.0.0.1:8000/> to access the React + Tailwind UI.
+Open <http://127.0.0.1:8000/> to access the React + Tailwind UI.
 
 ## Scope / Non-goals
 
