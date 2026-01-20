@@ -1,14 +1,15 @@
 # BLUX Commander
 
-> BLUX Commander — Enterprise Developer & AI Orchestration Cockpit
+> BLUX Commander — Read-only observability cockpit
 
 The bridge between mind and machine. The map that moves.
 
 ## Overview
 
-BLUX Commander delivers a unified cockpit for orchestrating the BLUX ecosystem. Developers and
-operators can visualize subsystems, run AI-assisted terminals, and automate workflows across
-Guard, Lite, Doctrine, Quantum, cA, and Reg components.
+BLUX Commander delivers a unified read-only observability cockpit for the BLUX ecosystem. It is
+**not a control plane** and performs **no execution**. Developers and operators can visualize
+traces, envelopes, audits, execution manifests, guard receipts, and system status without
+triggering actions.
 
 ### Highlights
 
@@ -27,8 +28,7 @@ Guard, Lite, Doctrine, Quantum, cA, and Reg components.
 ├── .github
 │   └── workflows
 │       ├── ci.yml
-│       ├── docs.yml
-│       └── release.yml
+│       └── physics.yml
 ├── .gitignore
 ├── CHANGELOG.md
 ├── CODE_OF_CONDUCT.md
@@ -82,6 +82,7 @@ Guard, Lite, Doctrine, Quantum, cA, and Reg components.
 │   ├── INSTALL.md
 │   ├── INTEGRATIONS.md
 │   ├── OPERATIONS.md
+│   ├── ROLE.md
 │   ├── ROADMAP.md
 │   ├── SECURITY.md
 │   ├── THEMES.md
