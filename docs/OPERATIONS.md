@@ -17,5 +17,5 @@ Use `bluxq cmd` to access read-only views:
 
 ## Read-Only Guardrails
 
-Commander does not launch shells, execute commands, or issue tokens. It only renders observability
+Commander does not launch terminals, execute commands, or issue tokens. It only renders observability
 artifacts such as envelope, guard_receipt, execution_manifest, audits, and traces.

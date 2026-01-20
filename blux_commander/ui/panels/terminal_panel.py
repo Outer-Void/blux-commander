@@ -16,4 +16,4 @@ class TerminalPanel(Static):
     """
 
     def on_mount(self) -> None:
-        self.update("Terminal ready. Use the shell command to interact.")
+        self.update("Terminal ready. Read-only view enabled.")

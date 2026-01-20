@@ -1,8 +1,9 @@
 # BLUX Commander
 
 BLUX Commander is a read-only observability cockpit for the BLUX ecosystem. It is **not a control
-plane** and performs **no execution**. The UI focuses on visibility rather than actions or
-orchestration.
+plane** and performs **no execution**, **no enforcement**, and **no tokens**. The UI focuses on
+visibility rather than actions or orchestration. Inputs are files/artifacts produced by other repos;
+Commander does not generate them.
 
 ## Capabilities
 

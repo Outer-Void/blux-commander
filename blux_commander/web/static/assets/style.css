@@ -108,7 +108,8 @@ section.panel h2 {
 }
 
 .filter label {
-  display: block;
+  display: flex;
+  flex-direction: column;
   font-weight: 600;
   margin-bottom: 0.35rem;
 }
@@ -123,7 +124,7 @@ section.panel h2 {
 }
 
 .filter small {
-  display: block;
+  display: inline-flex;
   margin-top: 0.5rem;
   color: #9da7bc;
 }
