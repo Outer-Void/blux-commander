@@ -3,10 +3,9 @@
 from __future__ import annotations
 
 import os
-import subprocess
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional
+from typing import Dict, List, Optional
 
 from .storage import StorageManager
 
@@ -92,12 +91,12 @@ def _inspect_repo(record: RepoRecord, path: Path) -> RepoInsight:
             description=record.description,
         )
 
-    branch = _run_git(["rev-parse", "--abbrev-ref", "HEAD"], cwd=path) or "unknown"
-    dirty = bool(_run_git(["status", "--porcelain"], cwd=path))
-    latest_commit = _run_git(["log", "-1", "--pretty=%h %s"], cwd=path)
-    ahead = _calculate_ahead(path)
+    branch = "untracked"
+    dirty = False
+    latest_commit = None
+    ahead = None
     size_bytes = _estimate_size(path)
-    tracked_files = _count_tracked_files(path)
+    tracked_files = _count_files(path)
     return RepoInsight(
         name=record.name,
         path=str(path),
@@ -109,44 +108,6 @@ def _inspect_repo(record: RepoRecord, path: Path) -> RepoInsight:
         tracked_files=tracked_files,
         description=record.description,
     )
-
-
-def _run_git(args: Iterable[str], *, cwd: Path) -> Optional[str]:
-    if not (cwd / ".git").exists():
-        return None
-    try:
-        completed = subprocess.run(
-            ["git", *args],
-            cwd=cwd,
-            text=True,
-            capture_output=True,
-            check=False,
-        )
-    except FileNotFoundError:
-        return None
-    output = completed.stdout.strip()
-    return output or None
-
-
-def _calculate_ahead(path: Path) -> Optional[int]:
-    if not (path / ".git").exists():
-        return None
-    try:
-        completed = subprocess.run(
-            ["git", "rev-list", "--count", "--left-only", "HEAD...@{u}"],
-            cwd=path,
-            text=True,
-            capture_output=True,
-            check=False,
-        )
-    except FileNotFoundError:
-        return None
-    if completed.returncode != 0:
-        return None
-    try:
-        return int(completed.stdout.strip() or "0")
-    except ValueError:
-        return None
 
 
 def _estimate_size(path: Path, *, file_limit: int = 5000) -> Optional[int]:
@@ -166,19 +127,12 @@ def _estimate_size(path: Path, *, file_limit: int = 5000) -> Optional[int]:
     return total
 
 
-def _count_tracked_files(path: Path) -> Optional[int]:
-    if not (path / ".git").exists():
+def _count_files(path: Path, *, file_limit: int = 5000) -> Optional[int]:
+    if not path.exists():
         return None
-    try:
-        completed = subprocess.run(
-            ["git", "ls-files"],
-            cwd=path,
-            text=True,
-            capture_output=True,
-            check=False,
-        )
-    except FileNotFoundError:
-        return None
-    if completed.returncode != 0:
-        return None
-    return len([line for line in completed.stdout.splitlines() if line])
+    counted = 0
+    for _, _, files in os.walk(path):
+        counted += len(files)
+        if counted >= file_limit:
+            return counted
+    return counted

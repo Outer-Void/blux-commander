@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import os
 import re
 from dataclasses import dataclass
@@ -16,14 +15,13 @@ _DEFAULT_CONFIG_SUBDIR = Path(".config") / "blux-commander"
 
 
 def default_storage_dir() -> Path:
-    """Return the configured storage directory, creating it if necessary."""
+    """Return the configured storage directory without creating it."""
 
     override = os.environ.get(_CONFIG_ENV_VAR)
     if override:
         path = Path(override).expanduser()
     else:
         path = Path.home() / _DEFAULT_CONFIG_SUBDIR
-    path.mkdir(parents=True, exist_ok=True)
     return path
 
 
@@ -56,38 +54,23 @@ class StorageManager:
 
     def __init__(self, base_dir: Optional[Path] = None, *, memory_retention: int = 200) -> None:
         self.base_dir = base_dir or default_storage_dir()
-        self.base_dir.mkdir(parents=True, exist_ok=True)
         self.logs_dir = self.base_dir / "logs"
-        self.logs_dir.mkdir(parents=True, exist_ok=True)
-        self.memory_file = self.base_dir / "memory.json"
-        self.repos_file = self.base_dir / "repos.json"
         self._memory_retention = memory_retention
-        if not self.memory_file.exists():
-            self.memory_file.write_text("[]", encoding="utf-8")
-        if not self.repos_file.exists():
-            self.repos_file.write_text("[]", encoding="utf-8")
+        self._memory_entries: List[Dict[str, Any]] = []
+        self._repos: List[Dict[str, Any]] = []
 
     # ------------------------------------------------------------------
     # Memory persistence
     # ------------------------------------------------------------------
     def append_memory(self, entry: CommandMemoryEntry) -> None:
-        data = self._read_memory_entries()
-        data.append(entry.as_dict())
-        data = data[-self._memory_retention :]
-        self.memory_file.write_text(json.dumps(data, indent=2), encoding="utf-8")
+        self._memory_entries.append(entry.as_dict())
+        self._memory_entries = self._memory_entries[-self._memory_retention :]
 
     def list_memory(self, *, limit: Optional[int] = 50) -> List[Dict[str, Any]]:
-        data = self._read_memory_entries()
-        data = list(reversed(data))
+        data = list(reversed(self._memory_entries))
         if limit is not None:
             data = data[:limit]
         return data
-
-    def _read_memory_entries(self) -> List[Dict[str, Any]]:
-        try:
-            return json.loads(self.memory_file.read_text(encoding="utf-8"))
-        except (FileNotFoundError, json.JSONDecodeError):
-            return []
 
     # ------------------------------------------------------------------
     # Logging helpers
@@ -96,17 +79,6 @@ class StorageManager:
         slug = self._slugify(entry.command)[:64] or "command"
         timestamp = datetime.fromisoformat(entry.timestamp).strftime("%Y%m%d-%H%M%S")
         log_path = self.logs_dir / f"{timestamp}-{slug}.log"
-        log_lines = [
-            f"Command: {entry.command}",
-            f"Repository: {entry.repo or 'N/A'}",
-            f"Exit code: {entry.exit_code}",
-            f"Duration: {entry.duration_seconds:.2f}s",
-            "-- stdout --",
-            *entry.output,
-            "-- stderr --",
-            *entry.error,
-        ]
-        log_path.write_text("\n".join(log_lines), encoding="utf-8")
         return log_path
 
     @staticmethod
@@ -118,14 +90,10 @@ class StorageManager:
     # Repo registry persistence
     # ------------------------------------------------------------------
     def load_repos(self) -> List[Dict[str, Any]]:
-        try:
-            return json.loads(self.repos_file.read_text(encoding="utf-8"))
-        except (FileNotFoundError, json.JSONDecodeError):
-            return []
+        return list(self._repos)
 
     def save_repos(self, records: Iterable[Dict[str, Any]]) -> None:
-        data = list(records)
-        self.repos_file.write_text(json.dumps(data, indent=2), encoding="utf-8")
+        self._repos = list(records)
 
 
 def build_memory_entry(
