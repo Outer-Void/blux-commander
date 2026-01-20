@@ -1,24 +1,32 @@
-# ROLE: Read-Only Observability Cockpit
+# BLUX Commander Role
 
-BLUX Commander is a read-only observability cockpit. It provides UI/UX for visualizing operational
-artifacts and telemetry only; it is **not a control plane** and it performs **no execution**, **no
-enforcement**, and **no tokens**.
+## Mission
 
-## Visualized artifacts
+BLUX Commander is a **read-only observability cockpit** for the BLUX ecosystem. It **is not a
+control plane** and it performs **no execution**.
 
-- `blux://contracts/envelope.schema.json`
-- `blux://contracts/guard_receipt.schema.json`
-- `blux://contracts/execution_manifest.schema.json` (reference only)
-- Audit logs (append-only JSONL), traces, spans
+## Allowed artifacts (display-only)
 
-## Out of scope
+BLUX Commander may only display and visualize the following artifacts:
 
-- Execution triggers or command dispatch
-- Policy decisions or enforcement
-- Capability issuance or token handling
-- System mutation or state changes
+- traces
+- envelopes
+- guard_receipts
+- execution_manifests
+- audits
+- status
 
-## CI boundary note
+## Explicit non-goals
 
-Only boundary checks are required; remove any build/deploy workflows not needed for read-only
-observability.
+BLUX Commander must never:
+
+- execute commands, tools, or workflows
+- issue, verify, or manage tokens of any kind
+- enforce policy or implement a policy engine
+- act as a runner, scheduler, or execution engine
+- mutate system state or reach into host controls
+
+## Boundary checks
+
+Repository CI includes physics tests that block execution primitives, state mutation intent, and
+role-bleed keywords in code directories.

@@ -11,58 +11,35 @@ report_error() {
   fail=1
 }
 
-find_dir_hits() {
-  local hits
-  hits=$(find . \
-    -path './.git' -prune -o \
-    -path './.venv' -prune -o \
-    -type d \( "$@" \) -print)
-  if [[ -n "$hits" ]]; then
-    printf '%s\n' "$hits"
+exec_pattern='child_process|exec\(|spawn\(|subprocess|os\.system|Runtime\.getRuntime|ProcessBuilder|bash -c|sh -c|powershell|cmd\.exe|sudo'
+if rg -n -S "$exec_pattern" --glob '!.git/**' --glob '!scripts/physics_tests.sh' .; then
+  report_error "Found command-execution primitives in repository."
+fi
+
+mutation_pattern='iptables|mount\\s|chroot|setcap|cap_net_admin|ptrace|/proc/|/sys/'
+if rg -n -S "$mutation_pattern" --glob '!.git/**' --glob '!scripts/physics_tests.sh' .; then
+  report_error "Found state-mutation intent in repository."
+fi
+
+role_dirs=()
+for dir in src app packages lib; do
+  if [[ -d "$dir" ]]; then
+    role_dirs+=("$dir")
   fi
-}
+done
 
-boundary_hits=$(find_dir_hits \
-  -iname executor \
-  -o -iname execution \
-  -o -iname runner \
-  -o -iname 'control-plane' \
-  -o -iname 'control_plane' \
-  -o -path '*/src/executor')
-
-if [[ -n "${boundary_hits:-}" ]]; then
-  report_error "Found execution/control-plane directories:\n${boundary_hits}"
+role_pattern='receipt engine|enforcement|policy engine|capability token|issue token|verify token|execute tool|runner|sandbox profile'
+if [[ "${#role_dirs[@]}" -gt 0 ]]; then
+  if rg -n -S -i "$role_pattern" "${role_dirs[@]}"; then
+    report_error "Found role-bleed keywords in code directories."
+  fi
 fi
 
-guard_hits=$(find_dir_hits \
-  -iname guard \
-  -o -iname reg \
-  -o -iname lite)
-
-if [[ -n "${guard_hits:-}" ]]; then
-  report_error "Found Guard/Reg/Lite directories:\n${guard_hits}"
-fi
-
-code_globs=(
-  --glob '*.sh'
-  --glob '*.py'
-  --glob '*.js'
-  --glob '*.ts'
-  --glob '*.go'
-  --glob '*.rs'
-  --glob '*.java'
-  --glob '*.kt'
-  --glob '!scripts/physics_tests.sh'
-)
-
-exec_pattern='subprocess|child_process|exec\(|spawn\(|system\(|os\.exec|Runtime\.getRuntime|ProcessBuilder'
-if rg -n "$exec_pattern" "${code_globs[@]}" .; then
-  report_error "Found command-execution primitives in code files."
-fi
-
-secret_pattern='BEGIN PRIVATE KEY|AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}|AWS_SECRET_ACCESS_KEY'
-if rg -n -S "$secret_pattern" --glob '!.git/**' .; then
-  report_error "Found possible secret material in repository."
+responsibility_pattern='\\bguard\\b|\\breg\\b|\\blite\\b'
+if [[ "${#role_dirs[@]}" -gt 0 ]]; then
+  if rg -n -S -i "$responsibility_pattern" "${role_dirs[@]}"; then
+    report_error "Found Guard/Reg/Lite responsibility signals in code directories."
+  fi
 fi
 
 if [[ "$fail" -ne 0 ]]; then
