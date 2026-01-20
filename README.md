@@ -16,6 +16,7 @@ Guard, Lite, Doctrine, Quantum, cA, and Reg components.
 - **Multi-Pane Cockpit** – Operate a Textual dashboard with terminal, logs, telemetry, and plugin panes.
 - **AI Developer Shell** – Launch sandboxed Python and system environments.
 - **Commander API** – Expose orchestration endpoints over FastAPI.
+- **Web Dashboard** – Launch a FastAPI + React cockpit with real-time command streaming.
 - **Plugin Framework** – Discover, validate, and execute external modules.
 - **Telemetry Dashboard** – Capture metrics via SQLite/JSONL and Prometheus exporters.
 
@@ -63,10 +64,15 @@ Guard, Lite, Doctrine, Quantum, cA, and Reg components.
 │   │       ├── default.tcss
 │   │       └── highcontrast.tcss
 │   └── web
+│       ├── auth.py
+│       ├── commands.py
+│       ├── insights.py
 │       ├── server.py
 │       ├── static
+│       │   ├── app.js
 │       │   └── assets
 │       │       └── style.css
+│       ├── storage.py
 │       └── templates
 │           └── index.html
 ├── docs
@@ -89,11 +95,11 @@ Guard, Lite, Doctrine, Quantum, cA, and Reg components.
 │   ├── run_tui_demo.py
 │   └── update_readme_filetree.py
 └── tests
-    ├── fixtures
     ├── test_cli.py
     ├── test_plugins.py
     ├── test_shell.py
-    └── test_tui.py
+    ├── test_tui.py
+    └── test_web_dashboard.py
 ```
 
 </details>
@@ -112,17 +118,13 @@ bluxq cmd dashboard
 
 See the [documentation](docs/index.md) for installation, operations, and integration details.
 
-## Licensing
+### Web Dashboard
 
-BLUX Commander is dual-licensed. For open-source use, it is available under the Apache License 2.0
-as described in [LICENSE-APACHE](LICENSE-APACHE) and the accompanying [NOTICE](NOTICE). Commercial
-or proprietary use requires a separate agreement under the terms in
-[LICENSE-COMMERCIAL](LICENSE-COMMERCIAL).
+Run the web orchestration dashboard locally with:
 
-### Open-source (Apache-2.0)
-You may use, modify, and distribute the project under the Apache License 2.0, provided you include
-the required notices and comply with the terms outlined in [LICENSE-APACHE](LICENSE-APACHE).
+```bash
+uvicorn blux_commander.web.server:app --reload
+```
 
-### Commercial licensing
-If you want to embed, distribute, or monetize BLUX Commander beyond what Apache-2.0 permits, you
-must obtain a commercial license. Contact theoutervoid@outlook.com to discuss terms.
+The server stores authentication keys, command memory, and repository metadata under
+`~/.config/blux-commander`. Open <http://127.0.0.1:8000/> to access the React + Tailwind UI.
