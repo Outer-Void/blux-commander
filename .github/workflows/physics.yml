@@ -1,0 +1,14 @@
+name: physics
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  boundary-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run physics tests
+        run: scripts/physics_tests.sh
