@@ -2,21 +2,398 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>BLUX Commander</title>
+    <title>BLUX Commander Observability Cockpit</title>
     <link rel="stylesheet" href="/static/assets/style.css" />
   </head>
   <body>
-    <main>
-      <h1>BLUX Commander</h1>
-      <p>The bridge between mind and machine. The map that moves.</p>
-      <section>
-        <h2>Subsystem Status</h2>
-        <ul>
-          {% for name, status in subsystems.items() %}
-          <li><strong>{{ name }}</strong>: {{ status }}</li>
-          {% endfor %}
-        </ul>
+    <main class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">BLUX Commander</p>
+          <h1>Observability Cockpit</h1>
+          <p class="subtitle">
+            Read-only audit cockpit for trace chains, discernment posture, guard receipts, and lite
+            executions. No execution commands are issued from this interface.
+          </p>
+        </div>
+        <div class="status">
+          <h2>Subsystem Status</h2>
+          <ul>
+            {% for name, status in subsystems.items() %}
+            <li><strong>{{ name }}</strong>: {{ status }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </header>
+
+      <section class="panel controls">
+        <div>
+          <h2>Load Local Audit Logs</h2>
+          <p>
+            Provide a JSON or NDJSON audit log export. Supported shapes include an array of events or
+            an object with an <code>events</code> array. Files stay in your browser.
+          </p>
+        </div>
+        <div class="control-grid">
+          <label class="file-input">
+            <input id="auditFile" type="file" accept=".json,.ndjson" />
+            <span>Choose audit log</span>
+          </label>
+          <div class="filter">
+            <label for="traceFilter">Filter by trace_id</label>
+            <input id="traceFilter" type="text" placeholder="trace_id" />
+            <small>Use a specific trace_id to focus the cockpit.</small>
+          </div>
+          <div class="actions">
+            <button id="exportJson" disabled>Export Trace JSON</button>
+            <button id="exportZip" disabled>Export Trace ZIP</button>
+            <p id="zipStatus" class="hint"></p>
+          </div>
+        </div>
+        <div id="loadStatus" class="load-status">Awaiting audit log upload.</div>
+      </section>
+
+      <section class="panel summary">
+        <h2>Trace Overview</h2>
+        <div class="summary-grid">
+          <div class="summary-card">
+            <h3>Total Events</h3>
+            <p id="totalEvents">0</p>
+          </div>
+          <div class="summary-card">
+            <h3>Distinct Traces</h3>
+            <p id="traceCount">0</p>
+          </div>
+          <div class="summary-card">
+            <h3>Selected Trace</h3>
+            <p id="selectedTrace">None</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Trace Chains (Envelope Hops)</h2>
+        <div id="traceChains" class="empty-state">Load an audit log to visualize envelope hops.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Discernment Reports &amp; Posture</h2>
+        <div id="discernmentReports" class="empty-state">
+          No discernment reports loaded yet.
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Guard Receipts &amp; Enforcement Decisions</h2>
+        <div id="guardReceipts" class="empty-state">No guard receipts loaded yet.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Lite Executions &amp; Outputs</h2>
+        <div id="liteExecutions" class="empty-state">No lite executions loaded yet.</div>
       </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script>
+      const auditFile = document.getElementById("auditFile");
+      const traceFilter = document.getElementById("traceFilter");
+      const exportJson = document.getElementById("exportJson");
+      const exportZip = document.getElementById("exportZip");
+      const zipStatus = document.getElementById("zipStatus");
+      const loadStatus = document.getElementById("loadStatus");
+
+      const totalEvents = document.getElementById("totalEvents");
+      const traceCount = document.getElementById("traceCount");
+      const selectedTrace = document.getElementById("selectedTrace");
+
+      const traceChains = document.getElementById("traceChains");
+      const discernmentReports = document.getElementById("discernmentReports");
+      const guardReceipts = document.getElementById("guardReceipts");
+      const liteExecutions = document.getElementById("liteExecutions");
+
+      const state = {
+        events: [],
+        traces: new Set(),
+      };
+
+      const extractTraceId = (event) =>
+        event.trace_id || event.traceId || event.trace?.id || event.envelope?.trace_id;
+
+      const formatTimestamp = (value) => {
+        if (!value) return "—";
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return value;
+        return date.toLocaleString();
+      };
+
+      const renderEmpty = (target, message) => {
+        target.innerHTML = `<div class="empty-state">${message}</div>`;
+      };
+
+      const renderList = (target, items, renderer, emptyMessage) => {
+        if (!items.length) {
+          renderEmpty(target, emptyMessage);
+          return;
+        }
+        const list = document.createElement("div");
+        list.className = "card-list";
+        items.forEach((item) => list.appendChild(renderer(item)));
+        target.innerHTML = "";
+        target.appendChild(list);
+      };
+
+      const createCard = (title, meta, body) => {
+        const card = document.createElement("article");
+        card.className = "card";
+        const heading = document.createElement("div");
+        heading.className = "card-heading";
+        heading.innerHTML = `<h3>${title}</h3><span>${meta}</span>`;
+        card.appendChild(heading);
+        const content = document.createElement("pre");
+        content.textContent = JSON.stringify(body, null, 2);
+        card.appendChild(content);
+        return card;
+      };
+
+      const normalizeEvents = (payload) => {
+        if (Array.isArray(payload)) return payload;
+        if (payload && Array.isArray(payload.events)) return payload.events;
+        if (payload && Array.isArray(payload.audit)) return payload.audit;
+        return [];
+      };
+
+      const parseFileContent = (text) => {
+        try {
+          return normalizeEvents(JSON.parse(text));
+        } catch (error) {
+          return text
+            .split(/\r?\n/)
+            .map((line) => line.trim())
+            .filter(Boolean)
+            .map((line) => {
+              try {
+                return JSON.parse(line);
+              } catch (parseError) {
+                return null;
+              }
+            })
+            .filter(Boolean);
+        }
+      };
+
+      const updateSummary = () => {
+        totalEvents.textContent = state.events.length.toString();
+        traceCount.textContent = state.traces.size.toString();
+        selectedTrace.textContent = traceFilter.value || "All traces";
+      };
+
+      const filterEvents = () => {
+        const filterValue = traceFilter.value.trim();
+        if (!filterValue) return state.events;
+        return state.events.filter((event) => extractTraceId(event) === filterValue);
+      };
+
+      const buildTraceChains = (events) => {
+        const hops = [];
+        events.forEach((event) => {
+          if (Array.isArray(event.envelope?.hops)) {
+            event.envelope.hops.forEach((hop) => hops.push({ event, hop }));
+            return;
+          }
+          if (event.hop || event.envelope?.hop) {
+            hops.push({ event, hop: event.hop || event.envelope?.hop });
+          }
+          if (event.type === "envelope_hop") {
+            hops.push({ event, hop: event });
+          }
+        });
+        return hops;
+      };
+
+      const buildDiscernment = (events) =>
+        events
+          .filter((event) => event.discernment || event.report?.discernment || event.posture)
+          .map((event) => ({
+            event,
+            report: event.discernment || event.report?.discernment || {},
+            posture: event.posture || event.discernment?.posture || {},
+          }));
+
+      const buildGuardReceipts = (events) =>
+        events
+          .filter(
+            (event) =>
+              event.guard_receipt ||
+              event.guardReceipt ||
+              event.receipt ||
+              event.enforcement ||
+              event.decision
+          )
+          .map((event) => ({
+            event,
+            receipt: event.guard_receipt || event.guardReceipt || event.receipt || event,
+            enforcement: event.enforcement || event.decision || {},
+          }));
+
+      const buildLiteExecutions = (events) =>
+        events
+          .filter((event) => event.lite_execution || event.execution || event.output)
+          .map((event) => ({
+            event,
+            execution: event.lite_execution || event.execution || event,
+            output: event.output || event.execution?.output || event.lite_execution?.output || "—",
+          }));
+
+      const renderAll = () => {
+        const filtered = filterEvents();
+        updateSummary();
+
+        const hops = buildTraceChains(filtered);
+        renderList(
+          traceChains,
+          hops,
+          ({ event, hop }) =>
+            createCard(
+              `Hop ${hop.sequence ?? hop.step ?? ""}`,
+              formatTimestamp(hop.timestamp || event.timestamp || event.time),
+              {
+                from: hop.from || hop.origin || event.source,
+                to: hop.to || hop.destination || event.target,
+                channel: hop.channel || event.channel,
+                status: hop.status || event.status,
+                trace_id: extractTraceId(event),
+                hop,
+              }
+            ),
+          "No envelope hop data found for this trace."
+        );
+
+        const discernments = buildDiscernment(filtered);
+        renderList(
+          discernmentReports,
+          discernments,
+          ({ event, report, posture }) =>
+            createCard(
+              report.summary || "Discernment Report",
+              `Posture score: ${posture.score ?? posture.value ?? "—"}`,
+              {
+                trace_id: extractTraceId(event),
+                report,
+                posture,
+              }
+            ),
+          "No discernment reports found for this trace."
+        );
+
+        const guards = buildGuardReceipts(filtered);
+        renderList(
+          guardReceipts,
+          guards,
+          ({ event, receipt, enforcement }) =>
+            createCard(
+              receipt.title || receipt.policy || "Guard Receipt",
+              enforcement.decision || receipt.decision || "Decision: —",
+              {
+                trace_id: extractTraceId(event),
+                receipt,
+                enforcement,
+              }
+            ),
+          "No guard receipts found for this trace."
+        );
+
+        const executions = buildLiteExecutions(filtered);
+        renderList(
+          liteExecutions,
+          executions,
+          ({ event, execution, output }) =>
+            createCard(
+              execution.name || execution.task || "Lite Execution",
+              formatTimestamp(execution.timestamp || event.timestamp),
+              {
+                trace_id: extractTraceId(event),
+                execution,
+                output,
+              }
+            ),
+          "No lite executions found for this trace."
+        );
+      };
+
+      const updateZipStatus = () => {
+        if (window.JSZip) {
+          zipStatus.textContent = "ZIP export ready.";
+        } else {
+          zipStatus.textContent = "ZIP export unavailable (JSZip not loaded).";
+        }
+      };
+
+      const exportTrace = (type) => {
+        const filtered = filterEvents();
+        const traceId = traceFilter.value.trim() || "all-traces";
+        const payload = {
+          trace_id: traceId,
+          exported_at: new Date().toISOString(),
+          events: filtered,
+        };
+
+        if (type === "json") {
+          const blob = new Blob([JSON.stringify(payload, null, 2)], {
+            type: "application/json",
+          });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = `${traceId}-trace-bundle.json`;
+          link.click();
+          URL.revokeObjectURL(url);
+          return;
+        }
+
+        if (!window.JSZip) {
+          zipStatus.textContent = "ZIP export unavailable.";
+          return;
+        }
+
+        const zip = new window.JSZip();
+        zip.file("trace-bundle.json", JSON.stringify(payload, null, 2));
+        zip.generateAsync({ type: "blob" }).then((blob) => {
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = `${traceId}-trace-bundle.zip`;
+          link.click();
+          URL.revokeObjectURL(url);
+        });
+      };
+
+      auditFile.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (loadEvent) => {
+          const content = loadEvent.target.result;
+          const events = parseFileContent(content);
+          state.events = events;
+          state.traces = new Set(events.map(extractTraceId).filter(Boolean));
+          loadStatus.textContent = `Loaded ${events.length} events from ${file.name}.`;
+          exportJson.disabled = events.length === 0;
+          exportZip.disabled = events.length === 0;
+          updateZipStatus();
+          renderAll();
+        };
+        reader.readAsText(file);
+      });
+
+      traceFilter.addEventListener("input", () => {
+        renderAll();
+      });
+
+      exportJson.addEventListener("click", () => exportTrace("json"));
+      exportZip.addEventListener("click", () => exportTrace("zip"));
+
+      updateZipStatus();
+    </script>
   </body>
 </html>

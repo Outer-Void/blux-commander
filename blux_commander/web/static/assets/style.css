@@ -1,5 +1,13 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 2rem;
   background: #0f1115;
@@ -10,12 +18,220 @@ a {
   color: #6dd3ff;
 }
 
-h1 {
-  margin-bottom: 0.5rem;
+main.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-section {
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #6dd3ff;
+  font-size: 0.75rem;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: #cbd2e5;
+  line-height: 1.5;
+}
+
+.status {
   background: rgba(255, 255, 255, 0.05);
   padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.status ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+section.panel {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+section.panel h2 {
+  margin-top: 0;
+}
+
+.controls p {
+  margin: 0.5rem 0 0;
+  color: #cbd2e5;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.file-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px dashed #6dd3ff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-input input {
+  display: none;
+}
+
+.file-input span {
+  font-weight: 600;
+}
+
+.filter label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.filter input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
   border-radius: 0.5rem;
+  border: 1px solid #2a2f3a;
+  background: #141821;
+  color: #f5f5f5;
+}
+
+.filter small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #9da7bc;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+button {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-weight: 600;
+  background: #6dd3ff;
+  color: #0f1115;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #2a2f3a;
+  color: #9da7bc;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin: 0;
+  color: #9da7bc;
+  font-size: 0.85rem;
+}
+
+.load-status {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #141821;
+  color: #cbd2e5;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.summary-card {
+  background: #141821;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.summary-card p {
+  font-size: 1.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.empty-state {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #141821;
+  color: #9da7bc;
+}
+
+.card-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #141821;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.card-heading h3 {
+  margin: 0;
+}
+
+.card-heading span {
+  color: #9da7bc;
+  font-size: 0.85rem;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.85rem;
+  color: #cbd2e5;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 1.25rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
 }
