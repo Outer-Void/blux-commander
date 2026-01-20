@@ -16,6 +16,7 @@ Guard, Lite, Doctrine, Quantum, cA, and Reg components.
 - **Multi-Pane Cockpit** – Operate a Textual dashboard with terminal, logs, telemetry, and plugin panes.
 - **AI Developer Shell** – Launch sandboxed Python and system environments.
 - **Commander API** – Expose orchestration endpoints over FastAPI.
+- **Web Dashboard** – Launch a FastAPI + React cockpit with real-time command streaming.
 - **Plugin Framework** – Discover, validate, and execute external modules.
 - **Telemetry Dashboard** – Capture metrics via SQLite/JSONL and Prometheus exporters.
 
@@ -63,10 +64,15 @@ Guard, Lite, Doctrine, Quantum, cA, and Reg components.
 │   │       ├── default.tcss
 │   │       └── highcontrast.tcss
 │   └── web
+│       ├── auth.py
+│       ├── commands.py
+│       ├── insights.py
 │       ├── server.py
 │       ├── static
+│       │   ├── app.js
 │       │   └── assets
 │       │       └── style.css
+│       ├── storage.py
 │       └── templates
 │           └── index.html
 ├── docs
@@ -89,11 +95,11 @@ Guard, Lite, Doctrine, Quantum, cA, and Reg components.
 │   ├── run_tui_demo.py
 │   └── update_readme_filetree.py
 └── tests
-    ├── fixtures
     ├── test_cli.py
     ├── test_plugins.py
     ├── test_shell.py
-    └── test_tui.py
+    ├── test_tui.py
+    └── test_web_dashboard.py
 ```
 
 </details>
@@ -111,3 +117,14 @@ bluxq cmd dashboard
 ```
 
 See the [documentation](docs/index.md) for installation, operations, and integration details.
+
+### Web Dashboard
+
+Run the web orchestration dashboard locally with:
+
+```bash
+uvicorn blux_commander.web.server:app --reload
+```
+
+The server stores authentication keys, command memory, and repository metadata under
+`~/.config/blux-commander`. Open <http://127.0.0.1:8000/> to access the React + Tailwind UI.
