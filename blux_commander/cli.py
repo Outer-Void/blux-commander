@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import typer
 
-from blux_commander.core import api, commander, plugins, shell, telemetry, tui
+from blux_commander.core import api, commander, plugins, telemetry, tui
 
 app = typer.Typer(help="BLUX Commander — Unified Cockpit")
 cmd_app = typer.Typer(help="Commander control surface")
@@ -26,13 +26,6 @@ def dashboard() -> None:
     """Launch the Textual dashboard."""
 
     tui.launch_dashboard()
-
-
-@cmd_app.command(name="shell")
-def shell_cmd() -> None:
-    """Start the AI developer shell."""
-
-    shell.start_interactive()
 
 
 @cmd_app.command()

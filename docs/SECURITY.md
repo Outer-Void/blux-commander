@@ -6,7 +6,7 @@ BLUX Commander emphasizes safe-by-default observability.
 
 - **Least Privilege** – dashboards run without execution, enforcement, or token issuance.
 - **Auditability** – telemetry trails surface audits and traces for review.
-- **Isolation** – no shell execution or subprocess invocation is permitted.
+- **Isolation** – no terminal execution or subprocess invocation is permitted.
 - **Integrity** – plugins are metadata-only and do not mutate system state.
 
 ## Hardening Checklist

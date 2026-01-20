@@ -7,9 +7,10 @@ The bridge between mind and machine. The map that moves.
 ## Overview
 
 BLUX Commander delivers a unified read-only observability cockpit for the BLUX ecosystem. It is
-**not a control plane** and performs **no execution**. Developers and operators can visualize
-traces, audits, envelope payloads, execution_manifest records, guard_receipt artifacts, and
-system status without triggering actions.
+**not a control plane** and performs **no execution**, **no enforcement**, and **no tokens**.
+Developers and operators can visualize envelopes, guard_receipt artifacts, execution_manifest
+records, audits/logs, and system status without triggering actions. Inputs are files and artifacts
+produced by other repos; BLUX Commander does not generate them.
 
 ### Highlights
 
@@ -40,7 +41,7 @@ system status without triggering actions.
 │   │   ├── commander.py
 │   │   ├── config.py
 │   │   ├── plugins.py
-│   │   ├── shell.py
+│   │   ├── terminal.py
 │   │   ├── telemetry.py
 │   │   └── tui.py
 │   ├── integrations
@@ -58,8 +59,6 @@ system status without triggering actions.
 │   │       ├── default.tcss
 │   │       └── highcontrast.tcss
 │   └── web
-│       ├── auth.py
-│       ├── commands.py
 │       ├── insights.py
 │       ├── server.py
 │       ├── static
@@ -92,7 +91,7 @@ system status without triggering actions.
 └── tests
     ├── test_cli.py
     ├── test_plugins.py
-    ├── test_shell.py
+    ├── test_terminal.py
     ├── test_tui.py
     └── test_web_dashboard.py
 ```
@@ -125,6 +124,7 @@ Open <http://127.0.0.1:8000/> to access the React + Tailwind UI.
 
 ## Scope / Non-goals
 
-BLUX Commander is a read-only observability cockpit. It is **not a control plane** and performs **no
-execution**, **no enforcement**, and **no tokens**. See [docs/ROLE.md](docs/ROLE.md) for the full
+BLUX Commander is a read-only observability cockpit. It is **not a control plane** and performs
+**no execution**, **no enforcement**, and **no tokens**. Inputs are file-based artifacts produced
+by other repos; Commander does not generate them. See [docs/ROLE.md](docs/ROLE.md) for the full
 scope and boundary checks.

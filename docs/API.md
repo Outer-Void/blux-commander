@@ -14,10 +14,6 @@
 The FastAPI service exposes the following read-only endpoints:
 
 - `GET /api/status` – returns subsystem status snapshot.
-- `GET /api/repos` – lists configured repository insights.
-- `POST /api/commands/execute` – returns a read-only rejection payload (no execution).
-- `GET /api/commands/memory` – lists recent command requests.
-- `GET /api/memory/replay` – replays stored command request metadata.
 - `GET /api/plugins` – lists registered plugin metadata.
 
 Refer to module docstrings for additional handler descriptions.

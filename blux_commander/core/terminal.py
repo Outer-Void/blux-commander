@@ -1,4 +1,4 @@
-"""Read-only shell stubs for BLUX Commander."""
+"""Read-only terminal stubs for BLUX Commander."""
 
 from __future__ import annotations
 
@@ -7,9 +7,9 @@ from typing import Iterable
 
 
 def start_interactive(commands: Iterable[str] | None = None) -> None:
-    """Reject interactive shells in read-only mode."""
+    """Reject interactive terminal sessions in read-only mode."""
 
-    raise RuntimeError("Interactive shells are disabled in the read-only observability cockpit.")
+    raise RuntimeError("Interactive terminal sessions are disabled in the read-only observability cockpit.")
 
 
 def run_command(command: str, *, cwd: str | Path | None = None) -> None:

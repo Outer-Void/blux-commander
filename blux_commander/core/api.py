@@ -1,4 +1,4 @@
-"""FastAPI service exposing commander orchestration."""
+"""FastAPI service exposing commander observability."""
 
 from __future__ import annotations
 
@@ -35,14 +35,6 @@ async def status() -> dict[str, dict[str, str]]:
     """Return subsystem status."""
 
     return {"subsystems": commander.state.subsystems}
-
-
-@app.post("/commands")
-async def execute(command: str) -> JSONResponse:
-    """Execute a named workflow command."""
-
-    commander.add_workflow(command)
-    return JSONResponse({"accepted": command})
 
 
 @app.get("/metrics")
