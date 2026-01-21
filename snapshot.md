@@ -3,150 +3,13 @@
 ## 1) Metadata
 - Repository name: blux-commander
 - Organization / owner: unknown
-- Default branch (if detectable): unknown
-- HEAD commit hash (if available): 8e965b6429e839bfe74091cb41721308255fca12
-- Snapshot timestamp (UTC): 2026-01-20T13:54:32.856331+00:00
-- Total file count (excluding directories): 146
+- Default branch (if detectable): work
+- HEAD commit hash (if available): bab22facb7705ac4ccbf895bf5f33286420f9f2b
+- Snapshot timestamp (UTC): 2026-01-21T07:58:05Z
+- Total file count (excluding directories): 62
 - Short description: # BLUX Commander
 
 ## 2) Repository Tree
-├── .git/
-│   ├── FETCH_HEAD [text]
-│   ├── HEAD [text]
-│   ├── config [text]
-│   ├── description [text]
-│   ├── hooks/
-│   │   ├── applypatch-msg.sample [text]
-│   │   ├── commit-msg.sample [text]
-│   │   ├── fsmonitor-watchman.sample [text]
-│   │   ├── post-update.sample [text]
-│   │   ├── pre-applypatch.sample [text]
-│   │   ├── pre-commit.sample [text]
-│   │   ├── pre-merge-commit.sample [text]
-│   │   ├── pre-push.sample [text]
-│   │   ├── pre-rebase.sample [text]
-│   │   ├── pre-receive.sample [text]
-│   │   ├── prepare-commit-msg.sample [text]
-│   │   ├── push-to-checkout.sample [text]
-│   │   ├── sendemail-validate.sample [text]
-│   │   └── update.sample [text]
-│   ├── index [binary]
-│   ├── info/
-│   │   └── exclude [text]
-│   ├── logs/
-│   │   ├── HEAD [text]
-│   │   └── refs/
-│   │       └── heads/
-│   │           └── work [text]
-│   ├── objects/
-│   │   ├── 00/
-│   │   │   └── f1f3894d0208b5956d66d0a21808d20a69265c [binary]
-│   │   ├── 0f/
-│   │   │   └── 07f8f92027b7430666d53ac042c34ca6f7940e [binary]
-│   │   ├── 11/
-│   │   │   ├── 093babff05fe82b756da40086739ccd28fffe2 [binary]
-│   │   │   └── 8623066910d226e08436061084196071197ea7 [binary]
-│   │   ├── 18/
-│   │   │   └── d3c22712584d510b48e230f3fea33314b2e8ba [binary]
-│   │   ├── 1c/
-│   │   │   └── a88be3afc0e6f521be1cab512decef2a9e3398 [binary]
-│   │   ├── 27/
-│   │   │   └── f67bfc822ae33ac6638913e5f26fc36d13c2df [binary]
-│   │   ├── 30/
-│   │   │   └── a7037f84f0e3acd9770ead68385516ec63eed3 [binary]
-│   │   ├── 34/
-│   │   │   └── a5f4700ef3ba5c89fe8cb131521280ce7ddce3 [binary]
-│   │   ├── 3c/
-│   │   │   └── 34aa33b2ded8a285cd2d2c074489c17fa53f33 [binary]
-│   │   ├── 41/
-│   │   │   └── 7d9aff9fac533feb31958958652d5c99abe455 [binary]
-│   │   ├── 4a/
-│   │   │   └── 09cca8592af5088ebd4045fa71c1ac3461406d [binary]
-│   │   ├── 4b/
-│   │   │   └── 1bdf8568d03c8b5970fa94d62146d89cb249c1 [binary]
-│   │   ├── 4d/
-│   │   │   └── fe985e9b2b61f0c2d29c48d6487777a3fa0974 [binary]
-│   │   ├── 54/
-│   │   │   └── 8d490c22cf5ab31cfecaeab9c7ec2725355943 [binary]
-│   │   ├── 58/
-│   │   │   └── 317e2614fdf0ab63a70c59563781aa46ff51d0 [binary]
-│   │   ├── 60/
-│   │   │   ├── eb905063a5f0dadeea166ea0d020a103a233fd [binary]
-│   │   │   └── ef7814cea07c03f5bf7cfe5e9ee75d45ae7399 [binary]
-│   │   ├── 62/
-│   │   │   └── d79202f3566222591deb60b79429717275c21d [binary]
-│   │   ├── 65/
-│   │   │   └── 5cdcad2a9f28dc48684726c7ca0e8c1a0f6e91 [binary]
-│   │   ├── 6a/
-│   │   │   └── 1134c3a345130189e446085b927a32d87708ff [binary]
-│   │   ├── 6d/
-│   │   │   └── 620aa316bff6f7929dca8deb38da38225672e3 [binary]
-│   │   ├── 6e/
-│   │   │   ├── 0e0c2bb1fbd4c464f781e947c5e75cb23d5244 [binary]
-│   │   │   ├── 5e85e0c26a9d7b0d51c136e6ca3b55f0db44a7 [binary]
-│   │   │   └── cd5b474d60d771ab2cb0bc6b98f4c6bc819347 [binary]
-│   │   ├── 72/
-│   │   │   └── 6e3b37fd2aea01a12e5647e6542240bed9cb09 [binary]
-│   │   ├── 76/
-│   │   │   └── 2d2eb7e6aa1144f785cd285cb9c97f19166f43 [binary]
-│   │   ├── 7b/
-│   │   │   ├── d76e448e2b4945577d9bf1acb293a44d260de3 [binary]
-│   │   │   └── d7bf4c502d7c05c17338e3b4a89cb78ee00515 [binary]
-│   │   ├── 84/
-│   │   │   └── 91c860cecbf4b84ab178a5d4b774c7cd2697e4 [binary]
-│   │   ├── 8b/
-│   │   │   └── 2156373efd139ecdb48704ff3e4a408aa29d04 [binary]
-│   │   ├── 8e/
-│   │   │   └── 965b6429e839bfe74091cb41721308255fca12 [binary]
-│   │   ├── 92/
-│   │   │   └── 2a9bafa643eb991634b97e7b561661d9139126 [binary]
-│   │   ├── 9c/
-│   │   │   └── ce8992c65b2a38a81bcc8b18d54f996e847bdd [binary]
-│   │   ├── 9d/
-│   │   │   └── 0018ced08a1e285f73ff7dcea47a1b9f84b294 [binary]
-│   │   ├── a3/
-│   │   │   └── 29b093830c669ebcbb2bb1ed1330a4ec65b978 [binary]
-│   │   ├── a5/
-│   │   │   └── 8516191009cd265e20d03d16356fbcf2a0abd4 [binary]
-│   │   ├── ac/
-│   │   │   ├── 5a1fcc20775898adbe993f0c28d42cde33e766 [binary]
-│   │   │   └── b9856d494bab326d3ec48b14c1a7e3b7224d2c [binary]
-│   │   ├── b5/
-│   │   │   ├── 03742da0f85f5510af17103b278bc82516a900 [binary]
-│   │   │   └── 8579777a5a26995da1e0376e9813163733e42b [binary]
-│   │   ├── be/
-│   │   │   └── b70f86b62b93f7eb130c7ad37de04706d79da9 [binary]
-│   │   ├── d0/
-│   │   │   ├── 2fd244143ee9c3e3f628958d70004391a5ce07 [binary]
-│   │   │   ├── 8f3c0a046f07972824596280f33d642f1a4012 [binary]
-│   │   │   ├── e35baa7c334bc355d43af18a6f76c2c6f7e692 [binary]
-│   │   │   └── f03571e3575b3798a91c0fdd9be8e33b6c44b6 [binary]
-│   │   ├── d3/
-│   │   │   └── d44026a76c68271c79b119763a7ababba263af [binary]
-│   │   ├── d6/
-│   │   │   └── c90a533a8091180f58c7d0ca8234f1dab9c846 [binary]
-│   │   ├── e1/
-│   │   │   └── 04af5dbd607ca5e9f6e34c99f86214c699f622 [binary]
-│   │   ├── ec/
-│   │   │   └── 51961d6fb705a2b71aa2a1a5d92fbcc0dc781c [binary]
-│   │   ├── ee/
-│   │   │   └── 17cb5c1bfd5fb1df6a7eac3fef3019c801b690 [binary]
-│   │   ├── f9/
-│   │   │   ├── 4588c40c8b262e555321590c1fb5684f042483 [binary]
-│   │   │   └── 5076afd1667aa5755a53e9237d406d555f082b [binary]
-│   │   ├── fa/
-│   │   │   ├── 3d632c2cd5e722eb31c6c8f5dc07b36eb5ecd7 [binary]
-│   │   │   └── 966eac8282ffa8da204cc02007b871cc912a43 [binary]
-│   │   ├── fc/
-│   │   │   └── 8122e2ab2e9d2e3430a19f158bb71e2481640e [binary]
-│   │   └── pack/
-│   │       ├── pack-e37421529fb54870d8e275e3039a244c7b87e337.idx [binary]
-│   │       ├── pack-e37421529fb54870d8e275e3039a244c7b87e337.pack [binary]
-│   │       └── pack-e37421529fb54870d8e275e3039a244c7b87e337.rev [binary]
-│   ├── packed-refs [text]
-│   └── refs/
-│       └── heads/
-│           └── work [text]
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml [text]
@@ -169,8 +32,8 @@
 │   │   ├── commander.py [text]
 │   │   ├── config.py [text]
 │   │   ├── plugins.py [text]
-│   │   ├── shell.py [text]
 │   │   ├── telemetry.py [text]
+│   │   ├── terminal.py [text]
 │   │   └── tui.py [text]
 │   ├── integrations/
 │   │   ├── ca.py [text]
@@ -187,8 +50,6 @@
 │   │       ├── default.tcss [text]
 │   │       └── highcontrast.tcss [text]
 │   └── web/
-│       ├── auth.py [text]
-│       ├── commands.py [text]
 │       ├── insights.py [text]
 │       ├── server.py [text]
 │       ├── static/
@@ -219,1669 +80,20 @@
 │   ├── physics_tests.sh [text]
 │   ├── run_tui_demo.py [text]
 │   └── update_readme_filetree.py [text]
+├── snapshot.md [text]
 └── tests/
     ├── test_cli.py [text]
     ├── test_plugins.py [text]
-    ├── test_shell.py [text]
+    ├── test_terminal.py [text]
     ├── test_tui.py [text]
     └── test_web_dashboard.py [text]
 
 ## 3) FULL FILE CONTENTS (MANDATORY)
 
-FILE: .git/FETCH_HEAD
-Kind: text
-Size: 104
-Last modified: 2026-01-20T13:53:31.383815+00:00
-
-CONTENT:
-8e965b6429e839bfe74091cb41721308255fca12		branch 'main' of https://github.com/Outer-Void/blux-commander
-
-FILE: .git/HEAD
-Kind: text
-Size: 21
-Last modified: 2026-01-20T13:53:31.427815+00:00
-
-CONTENT:
-ref: refs/heads/work
-
-FILE: .git/config
-Kind: text
-Size: 92
-Last modified: 2026-01-20T13:53:31.455814+00:00
-
-CONTENT:
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = false
-	logallrefupdates = true
-
-FILE: .git/description
-Kind: text
-Size: 73
-Last modified: 2026-01-20T07:01:55.702058+00:00
-
-CONTENT:
-Unnamed repository; edit this file 'description' to name the repository.
-
-FILE: .git/hooks/applypatch-msg.sample
-Kind: text
-Size: 478
-Last modified: 2026-01-20T07:01:55.702058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# An example hook script to check the commit log message taken by
-# applypatch from an e-mail message.
-#
-# The hook should exit with non-zero status after issuing an
-# appropriate message if it wants to stop the commit.  The hook is
-# allowed to edit the commit message file.
-#
-# To enable this hook, rename this file to "applypatch-msg".
-
-. git-sh-setup
-commitmsg="$(git rev-parse --git-path hooks/commit-msg)"
-test -x "$commitmsg" && exec "$commitmsg" ${1+"$@"}
-:
-
-FILE: .git/hooks/commit-msg.sample
-Kind: text
-Size: 896
-Last modified: 2026-01-20T07:01:55.702058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# An example hook script to check the commit log message.
-# Called by "git commit" with one argument, the name of the file
-# that has the commit message.  The hook should exit with non-zero
-# status after issuing an appropriate message if it wants to stop the
-# commit.  The hook is allowed to edit the commit message file.
-#
-# To enable this hook, rename this file to "commit-msg".
-
-# Uncomment the below to add a Signed-off-by line to the message.
-# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
-# hook is more suited to it.
-#
-# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
-# grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"
-
-# This example catches duplicate Signed-off-by lines.
-
-test "" = "$(grep '^Signed-off-by: ' "$1" |
-	 sort | uniq -c | sed -e '/^[ 	]*1[ 	]/d')" || {
-	echo >&2 Duplicate Signed-off-by lines.
-	exit 1
-}
-
-FILE: .git/hooks/fsmonitor-watchman.sample
-Kind: text
-Size: 4726
-Last modified: 2026-01-20T07:01:55.702058+00:00
-
-CONTENT:
-#!/usr/bin/perl
-
-use strict;
-use warnings;
-use IPC::Open2;
-
-# An example hook script to integrate Watchman
-# (https://facebook.github.io/watchman/) with git to speed up detecting
-# new and modified files.
-#
-# The hook is passed a version (currently 2) and last update token
-# formatted as a string and outputs to stdout a new update token and
-# all files that have been modified since the update token. Paths must
-# be relative to the root of the working tree and separated by a single NUL.
-#
-# To enable this hook, rename this file to "query-watchman" and set
-# 'git config core.fsmonitor .git/hooks/query-watchman'
-#
-my ($version, $last_update_token) = @ARGV;
-
-# Uncomment for debugging
-# print STDERR "$0 $version $last_update_token\n";
-
-# Check the hook interface version
-if ($version ne 2) {
-	die "Unsupported query-fsmonitor hook version '$version'.\n" .
-	    "Falling back to scanning...\n";
-}
-
-my $git_work_tree = get_working_dir();
-
-my $retry = 1;
-
-my $json_pkg;
-eval {
-	require JSON::XS;
-	$json_pkg = "JSON::XS";
-	1;
-} or do {
-	require JSON::PP;
-	$json_pkg = "JSON::PP";
-};
-
-launch_watchman();
-
-sub launch_watchman {
-	my $o = watchman_query();
-	if (is_work_tree_watched($o)) {
-		output_result($o->{clock}, @{$o->{files}});
-	}
-}
-
-sub output_result {
-	my ($clockid, @files) = @_;
-
-	# Uncomment for debugging watchman output
-	# open (my $fh, ">", ".git/watchman-output.out");
-	# binmode $fh, ":utf8";
-	# print $fh "$clockid\n@files\n";
-	# close $fh;
-
-	binmode STDOUT, ":utf8";
-	print $clockid;
-	print "\0";
-	local $, = "\0";
-	print @files;
-}
-
-sub watchman_clock {
-	my $response = qx/watchman clock "$git_work_tree"/;
-	die "Failed to get clock id on '$git_work_tree'.\n" .
-		"Falling back to scanning...\n" if $? != 0;
-
-	return $json_pkg->new->utf8->decode($response);
-}
-
-sub watchman_query {
-	my $pid = open2(\*CHLD_OUT, \*CHLD_IN, 'watchman -j --no-pretty')
-	or die "open2() failed: $!\n" .
-	"Falling back to scanning...\n";
-
-	# In the query expression below we're asking for names of files that
-	# changed since $last_update_token but not from the .git folder.
-	#
-	# To accomplish this, we're using the "since" generator to use the
-	# recency index to select candidate nodes and "fields" to limit the
-	# output to file names only. Then we're using the "expression" term to
-	# further constrain the results.
-	my $last_update_line = "";
-	if (substr($last_update_token, 0, 1) eq "c") {
-		$last_update_token = "\"$last_update_token\"";
-		$last_update_line = qq[\n"since": $last_update_token,];
-	}
-	my $query = <<"	END";
-		["query", "$git_work_tree", {$last_update_line
-			"fields": ["name"],
-			"expression": ["not", ["dirname", ".git"]]
-		}]
-	END
-
-	# Uncomment for debugging the watchman query
-	# open (my $fh, ">", ".git/watchman-query.json");
-	# print $fh $query;
-	# close $fh;
-
-	print CHLD_IN $query;
-	close CHLD_IN;
-	my $response = do {local $/; <CHLD_OUT>};
-
-	# Uncomment for debugging the watch response
-	# open ($fh, ">", ".git/watchman-response.json");
-	# print $fh $response;
-	# close $fh;
-
-	die "Watchman: command returned no output.\n" .
-	"Falling back to scanning...\n" if $response eq "";
-	die "Watchman: command returned invalid output: $response\n" .
-	"Falling back to scanning...\n" unless $response =~ /^\{/;
-
-	return $json_pkg->new->utf8->decode($response);
-}
-
-sub is_work_tree_watched {
-	my ($output) = @_;
-	my $error = $output->{error};
-	if ($retry > 0 and $error and $error =~ m/unable to resolve root .* directory (.*) is not watched/) {
-		$retry--;
-		my $response = qx/watchman watch "$git_work_tree"/;
-		die "Failed to make watchman watch '$git_work_tree'.\n" .
-		    "Falling back to scanning...\n" if $? != 0;
-		$output = $json_pkg->new->utf8->decode($response);
-		$error = $output->{error};
-		die "Watchman: $error.\n" .
-		"Falling back to scanning...\n" if $error;
-
-		# Uncomment for debugging watchman output
-		# open (my $fh, ">", ".git/watchman-output.out");
-		# close $fh;
-
-		# Watchman will always return all files on the first query so
-		# return the fast "everything is dirty" flag to git and do the
-		# Watchman query just to get it over with now so we won't pay
-		# the cost in git to look up each individual file.
-		my $o = watchman_clock();
-		$error = $output->{error};
-
-		die "Watchman: $error.\n" .
-		"Falling back to scanning...\n" if $error;
-
-		output_result($o->{clock}, ("/"));
-		$last_update_token = $o->{clock};
-
-		eval { launch_watchman() };
-		return 0;
-	}
-
-	die "Watchman: $error.\n" .
-	"Falling back to scanning...\n" if $error;
-
-	return 1;
-}
-
-sub get_working_dir {
-	my $working_dir;
-	if ($^O =~ 'msys' || $^O =~ 'cygwin') {
-		$working_dir = Win32::GetCwd();
-		$working_dir =~ tr/\\/\//;
-	} else {
-		require Cwd;
-		$working_dir = Cwd::cwd();
-	}
-
-	return $working_dir;
-}
-
-FILE: .git/hooks/post-update.sample
-Kind: text
-Size: 189
-Last modified: 2026-01-20T07:01:55.706058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# An example hook script to prepare a packed repository for use over
-# dumb transports.
-#
-# To enable this hook, rename this file to "post-update".
-
-exec git update-server-info
-
-FILE: .git/hooks/pre-applypatch.sample
-Kind: text
-Size: 424
-Last modified: 2026-01-20T07:01:55.706058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# An example hook script to verify what is about to be committed
-# by applypatch from an e-mail message.
-#
-# The hook should exit with non-zero status after issuing an
-# appropriate message if it wants to stop the commit.
-#
-# To enable this hook, rename this file to "pre-applypatch".
-
-. git-sh-setup
-precommit="$(git rev-parse --git-path hooks/pre-commit)"
-test -x "$precommit" && exec "$precommit" ${1+"$@"}
-:
-
-FILE: .git/hooks/pre-commit.sample
-Kind: text
-Size: 1643
-Last modified: 2026-01-20T07:01:55.706058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# An example hook script to verify what is about to be committed.
-# Called by "git commit" with no arguments.  The hook should
-# exit with non-zero status after issuing an appropriate message if
-# it wants to stop the commit.
-#
-# To enable this hook, rename this file to "pre-commit".
-
-if git rev-parse --verify HEAD >/dev/null 2>&1
-then
-	against=HEAD
-else
-	# Initial commit: diff against an empty tree object
-	against=$(git hash-object -t tree /dev/null)
-fi
-
-# If you want to allow non-ASCII filenames set this variable to true.
-allownonascii=$(git config --type=bool hooks.allownonascii)
-
-# Redirect output to stderr.
-exec 1>&2
-
-# Cross platform projects tend to avoid non-ASCII filenames; prevent
-# them from being added to the repository. We exploit the fact that the
-# printable range starts at the space character and ends with tilde.
-if [ "$allownonascii" != "true" ] &&
-	# Note that the use of brackets around a tr range is ok here, (it's
-	# even required, for portability to Solaris 10's /usr/bin/tr), since
-	# the square bracket bytes happen to fall in the designated range.
-	test $(git diff --cached --name-only --diff-filter=A -z $against |
-	  LC_ALL=C tr -d '[ -~]\0' | wc -c) != 0
-then
-	cat <<\EOF
-Error: Attempt to add a non-ASCII file name.
-
-This can cause problems if you want to work with people on other platforms.
-
-To be portable it is advisable to rename the file.
-
-If you know what you are doing you can disable this check using:
-
-  git config hooks.allownonascii true
-EOF
-	exit 1
-fi
-
-# If there are whitespace errors, print the offending file names and fail.
-exec git diff-index --check --cached $against --
-
-FILE: .git/hooks/pre-merge-commit.sample
-Kind: text
-Size: 416
-Last modified: 2026-01-20T07:01:55.702058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# An example hook script to verify what is about to be committed.
-# Called by "git merge" with no arguments.  The hook should
-# exit with non-zero status after issuing an appropriate message to
-# stderr if it wants to stop the merge commit.
-#
-# To enable this hook, rename this file to "pre-merge-commit".
-
-. git-sh-setup
-test -x "$GIT_DIR/hooks/pre-commit" &&
-        exec "$GIT_DIR/hooks/pre-commit"
-:
-
-FILE: .git/hooks/pre-push.sample
-Kind: text
-Size: 1374
-Last modified: 2026-01-20T07:01:55.702058+00:00
-
-CONTENT:
-#!/bin/sh
-
-# An example hook script to verify what is about to be pushed.  Called by "git
-# push" after it has checked the remote status, but before anything has been
-# pushed.  If this script exits with a non-zero status nothing will be pushed.
-#
-# This hook is called with the following parameters:
-#
-# $1 -- Name of the remote to which the push is being done
-# $2 -- URL to which the push is being done
-#
-# If pushing without using a named remote those arguments will be equal.
-#
-# Information about the commits which are being pushed is supplied as lines to
-# the standard input in the form:
-#
-#   <local ref> <local oid> <remote ref> <remote oid>
-#
-# This sample shows how to prevent push of commits where the log message starts
-# with "WIP" (work in progress).
-
-remote="$1"
-url="$2"
-
-zero=$(git hash-object --stdin </dev/null | tr '[0-9a-f]' '0')
-
-while read local_ref local_oid remote_ref remote_oid
-do
-	if test "$local_oid" = "$zero"
-	then
-		# Handle delete
-		:
-	else
-		if test "$remote_oid" = "$zero"
-		then
-			# New branch, examine all commits
-			range="$local_oid"
-		else
-			# Update to existing branch, examine new commits
-			range="$remote_oid..$local_oid"
-		fi
-
-		# Check for WIP commit
-		commit=$(git rev-list -n 1 --grep '^WIP' "$range")
-		if test -n "$commit"
-		then
-			echo >&2 "Found WIP commit in $local_ref, not pushing"
-			exit 1
-		fi
-	fi
-done
-
-exit 0
-
-FILE: .git/hooks/pre-rebase.sample
-Kind: text
-Size: 4898
-Last modified: 2026-01-20T07:01:55.706058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# Copyright (c) 2006, 2008 Junio C Hamano
-#
-# The "pre-rebase" hook is run just before "git rebase" starts doing
-# its job, and can prevent the command from running by exiting with
-# non-zero status.
-#
-# The hook is called with the following parameters:
-#
-# $1 -- the upstream the series was forked from.
-# $2 -- the branch being rebased (or empty when rebasing the current branch).
-#
-# This sample shows how to prevent topic branches that are already
-# merged to 'next' branch from getting rebased, because allowing it
-# would result in rebasing already published history.
-
-publish=next
-basebranch="$1"
-if test "$#" = 2
-then
-	topic="refs/heads/$2"
-else
-	topic=`git symbolic-ref HEAD` ||
-	exit 0 ;# we do not interrupt rebasing detached HEAD
-fi
-
-case "$topic" in
-refs/heads/??/*)
-	;;
-*)
-	exit 0 ;# we do not interrupt others.
-	;;
-esac
-
-# Now we are dealing with a topic branch being rebased
-# on top of master.  Is it OK to rebase it?
-
-# Does the topic really exist?
-git show-ref -q "$topic" || {
-	echo >&2 "No such branch $topic"
-	exit 1
-}
-
-# Is topic fully merged to master?
-not_in_master=`git rev-list --pretty=oneline ^master "$topic"`
-if test -z "$not_in_master"
-then
-	echo >&2 "$topic is fully merged to master; better remove it."
-	exit 1 ;# we could allow it, but there is no point.
-fi
-
-# Is topic ever merged to next?  If so you should not be rebasing it.
-only_next_1=`git rev-list ^master "^$topic" ${publish} | sort`
-only_next_2=`git rev-list ^master           ${publish} | sort`
-if test "$only_next_1" = "$only_next_2"
-then
-	not_in_topic=`git rev-list "^$topic" master`
-	if test -z "$not_in_topic"
-	then
-		echo >&2 "$topic is already up to date with master"
-		exit 1 ;# we could allow it, but there is no point.
-	else
-		exit 0
-	fi
-else
-	not_in_next=`git rev-list --pretty=oneline ^${publish} "$topic"`
-	/usr/bin/perl -e '
-		my $topic = $ARGV[0];
-		my $msg = "* $topic has commits already merged to public branch:\n";
-		my (%not_in_next) = map {
-			/^([0-9a-f]+) /;
-			($1 => 1);
-		} split(/\n/, $ARGV[1]);
-		for my $elem (map {
-				/^([0-9a-f]+) (.*)$/;
-				[$1 => $2];
-			} split(/\n/, $ARGV[2])) {
-			if (!exists $not_in_next{$elem->[0]}) {
-				if ($msg) {
-					print STDERR $msg;
-					undef $msg;
-				}
-				print STDERR " $elem->[1]\n";
-			}
-		}
-	' "$topic" "$not_in_next" "$not_in_master"
-	exit 1
-fi
-
-<<\DOC_END
-
-This sample hook safeguards topic branches that have been
-published from being rewound.
-
-The workflow assumed here is:
-
- * Once a topic branch forks from "master", "master" is never
-   merged into it again (either directly or indirectly).
-
- * Once a topic branch is fully cooked and merged into "master",
-   it is deleted.  If you need to build on top of it to correct
-   earlier mistakes, a new topic branch is created by forking at
-   the tip of the "master".  This is not strictly necessary, but
-   it makes it easier to keep your history simple.
-
- * Whenever you need to test or publish your changes to topic
-   branches, merge them into "next" branch.
-
-The script, being an example, hardcodes the publish branch name
-to be "next", but it is trivial to make it configurable via
-$GIT_DIR/config mechanism.
-
-With this workflow, you would want to know:
-
-(1) ... if a topic branch has ever been merged to "next".  Young
-    topic branches can have stupid mistakes you would rather
-    clean up before publishing, and things that have not been
-    merged into other branches can be easily rebased without
-    affecting other people.  But once it is published, you would
-    not want to rewind it.
-
-(2) ... if a topic branch has been fully merged to "master".
-    Then you can delete it.  More importantly, you should not
-    build on top of it -- other people may already want to
-    change things related to the topic as patches against your
-    "master", so if you need further changes, it is better to
-    fork the topic (perhaps with the same name) afresh from the
-    tip of "master".
-
-Let's look at this example:
-
-		   o---o---o---o---o---o---o---o---o---o "next"
-		  /       /           /           /
-		 /   a---a---b A     /           /
-		/   /               /           /
-	       /   /   c---c---c---c B         /
-	      /   /   /             \         /
-	     /   /   /   b---b C     \       /
-	    /   /   /   /             \     /
-    ---o---o---o---o---o---o---o---o---o---o---o "master"
-
-
-A, B and C are topic branches.
-
- * A has one fix since it was merged up to "next".
-
- * B has finished.  It has been fully merged up to "master" and "next",
-   and is ready to be deleted.
-
- * C has not merged to "next" at all.
-
-We would want to allow C to be rebased, refuse A, and encourage
-B to be deleted.
-
-To compute (1):
-
-	git rev-list ^master ^topic next
-	git rev-list ^master        next
-
-	if these match, topic has not merged in next at all.
-
-To compute (2):
-
-	git rev-list master..topic
-
-	if this is empty, it is fully merged to "master".
-
-DOC_END
-
-FILE: .git/hooks/pre-receive.sample
-Kind: text
-Size: 544
-Last modified: 2026-01-20T07:01:55.706058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# An example hook script to make use of push options.
-# The example simply echoes all push options that start with 'echoback='
-# and rejects all pushes when the "reject" push option is used.
-#
-# To enable this hook, rename this file to "pre-receive".
-
-if test -n "$GIT_PUSH_OPTION_COUNT"
-then
-	i=0
-	while test "$i" -lt "$GIT_PUSH_OPTION_COUNT"
-	do
-		eval "value=\$GIT_PUSH_OPTION_$i"
-		case "$value" in
-		echoback=*)
-			echo "echo from the pre-receive-hook: ${value#*=}" >&2
-			;;
-		reject)
-			exit 1
-		esac
-		i=$((i + 1))
-	done
-fi
-
-FILE: .git/hooks/prepare-commit-msg.sample
-Kind: text
-Size: 1492
-Last modified: 2026-01-20T07:01:55.706058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# An example hook script to prepare the commit log message.
-# Called by "git commit" with the name of the file that has the
-# commit message, followed by the description of the commit
-# message's source.  The hook's purpose is to edit the commit
-# message file.  If the hook fails with a non-zero status,
-# the commit is aborted.
-#
-# To enable this hook, rename this file to "prepare-commit-msg".
-
-# This hook includes three examples. The first one removes the
-# "# Please enter the commit message..." help message.
-#
-# The second includes the output of "git diff --name-status -r"
-# into the message, just before the "git status" output.  It is
-# commented because it doesn't cope with --amend or with squashed
-# commits.
-#
-# The third example adds a Signed-off-by line to the message, that can
-# still be edited.  This is rarely a good idea.
-
-COMMIT_MSG_FILE=$1
-COMMIT_SOURCE=$2
-SHA1=$3
-
-/usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
-
-# case "$COMMIT_SOURCE,$SHA1" in
-#  ,|template,)
-#    /usr/bin/perl -i.bak -pe '
-#       print "\n" . `git diff --cached --name-status -r`
-# 	 if /^#/ && $first++ == 0' "$COMMIT_MSG_FILE" ;;
-#  *) ;;
-# esac
-
-# SOB=$(git var GIT_COMMITTER_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
-# git interpret-trailers --in-place --trailer "$SOB" "$COMMIT_MSG_FILE"
-# if test -z "$COMMIT_SOURCE"
-# then
-#   /usr/bin/perl -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
-# fi
-
-FILE: .git/hooks/push-to-checkout.sample
-Kind: text
-Size: 2783
-Last modified: 2026-01-20T07:01:55.706058+00:00
-
-CONTENT:
-#!/bin/sh
-
-# An example hook script to update a checked-out tree on a git push.
-#
-# This hook is invoked by git-receive-pack(1) when it reacts to git
-# push and updates reference(s) in its repository, and when the push
-# tries to update the branch that is currently checked out and the
-# receive.denyCurrentBranch configuration variable is set to
-# updateInstead.
-#
-# By default, such a push is refused if the working tree and the index
-# of the remote repository has any difference from the currently
-# checked out commit; when both the working tree and the index match
-# the current commit, they are updated to match the newly pushed tip
-# of the branch. This hook is to be used to override the default
-# behaviour; however the code below reimplements the default behaviour
-# as a starting point for convenient modification.
-#
-# The hook receives the commit with which the tip of the current
-# branch is going to be updated:
-commit=$1
-
-# It can exit with a non-zero status to refuse the push (when it does
-# so, it must not modify the index or the working tree).
-die () {
-	echo >&2 "$*"
-	exit 1
-}
-
-# Or it can make any necessary changes to the working tree and to the
-# index to bring them to the desired state when the tip of the current
-# branch is updated to the new commit, and exit with a zero status.
-#
-# For example, the hook can simply run git read-tree -u -m HEAD "$1"
-# in order to emulate git fetch that is run in the reverse direction
-# with git push, as the two-tree form of git read-tree -u -m is
-# essentially the same as git switch or git checkout that switches
-# branches while keeping the local changes in the working tree that do
-# not interfere with the difference between the branches.
-
-# The below is a more-or-less exact translation to shell of the C code
-# for the default behaviour for git's push-to-checkout hook defined in
-# the push_to_deploy() function in builtin/receive-pack.c.
-#
-# Note that the hook will be executed from the repository directory,
-# not from the working tree, so if you want to perform operations on
-# the working tree, you will have to adapt your code accordingly, e.g.
-# by adding "cd .." or using relative paths.
-
-if ! git update-index -q --ignore-submodules --refresh
-then
-	die "Up-to-date check failed"
-fi
-
-if ! git diff-files --quiet --ignore-submodules --
-then
-	die "Working directory has unstaged changes"
-fi
-
-# This is a rough translation of:
-#
-#   head_has_history() ? "HEAD" : EMPTY_TREE_SHA1_HEX
-if git cat-file -e HEAD 2>/dev/null
-then
-	head=HEAD
-else
-	head=$(git hash-object -t tree --stdin </dev/null)
-fi
-
-if ! git diff-index --quiet --cached --ignore-submodules $head --
-then
-	die "Working directory has staged changes"
-fi
-
-if ! git read-tree -u -m "$commit"
-then
-	die "Could not update working tree to new HEAD"
-fi
-
-FILE: .git/hooks/sendemail-validate.sample
-Kind: text
-Size: 2308
-Last modified: 2026-01-20T07:01:55.706058+00:00
-
-CONTENT:
-#!/bin/sh
-
-# An example hook script to validate a patch (and/or patch series) before
-# sending it via email.
-#
-# The hook should exit with non-zero status after issuing an appropriate
-# message if it wants to prevent the email(s) from being sent.
-#
-# To enable this hook, rename this file to "sendemail-validate".
-#
-# By default, it will only check that the patch(es) can be applied on top of
-# the default upstream branch without conflicts in a secondary worktree. After
-# validation (successful or not) of the last patch of a series, the worktree
-# will be deleted.
-#
-# The following config variables can be set to change the default remote and
-# remote ref that are used to apply the patches against:
-#
-#   sendemail.validateRemote (default: origin)
-#   sendemail.validateRemoteRef (default: HEAD)
-#
-# Replace the TODO placeholders with appropriate checks according to your
-# needs.
-
-validate_cover_letter () {
-	file="$1"
-	# TODO: Replace with appropriate checks (e.g. spell checking).
-	true
-}
-
-validate_patch () {
-	file="$1"
-	# Ensure that the patch applies without conflicts.
-	git am -3 "$file" || return
-	# TODO: Replace with appropriate checks for this patch
-	# (e.g. checkpatch.pl).
-	true
-}
-
-validate_series () {
-	# TODO: Replace with appropriate checks for the whole series
-	# (e.g. quick build, coding style checks, etc.).
-	true
-}
-
-# main -------------------------------------------------------------------------
-
-if test "$GIT_SENDEMAIL_FILE_COUNTER" = 1
-then
-	remote=$(git config --default origin --get sendemail.validateRemote) &&
-	ref=$(git config --default HEAD --get sendemail.validateRemoteRef) &&
-	worktree=$(mktemp --tmpdir -d sendemail-validate.XXXXXXX) &&
-	git worktree add -fd --checkout "$worktree" "refs/remotes/$remote/$ref" &&
-	git config --replace-all sendemail.validateWorktree "$worktree"
-else
-	worktree=$(git config --get sendemail.validateWorktree)
-fi || {
-	echo "sendemail-validate: error: failed to prepare worktree" >&2
-	exit 1
-}
-
-unset GIT_DIR GIT_WORK_TREE
-cd "$worktree" &&
-
-if grep -q "^diff --git " "$1"
-then
-	validate_patch "$1"
-else
-	validate_cover_letter "$1"
-fi &&
-
-if test "$GIT_SENDEMAIL_FILE_COUNTER" = "$GIT_SENDEMAIL_FILE_TOTAL"
-then
-	git config --unset-all sendemail.validateWorktree &&
-	trap 'git worktree remove -ff "$worktree"' EXIT &&
-	validate_series
-fi
-
-FILE: .git/hooks/update.sample
-Kind: text
-Size: 3650
-Last modified: 2026-01-20T07:01:55.706058+00:00
-
-CONTENT:
-#!/bin/sh
-#
-# An example hook script to block unannotated tags from entering.
-# Called by "git receive-pack" with arguments: refname sha1-old sha1-new
-#
-# To enable this hook, rename this file to "update".
-#
-# Config
-# ------
-# hooks.allowunannotated
-#   This boolean sets whether unannotated tags will be allowed into the
-#   repository.  By default they won't be.
-# hooks.allowdeletetag
-#   This boolean sets whether deleting tags will be allowed in the
-#   repository.  By default they won't be.
-# hooks.allowmodifytag
-#   This boolean sets whether a tag may be modified after creation. By default
-#   it won't be.
-# hooks.allowdeletebranch
-#   This boolean sets whether deleting branches will be allowed in the
-#   repository.  By default they won't be.
-# hooks.denycreatebranch
-#   This boolean sets whether remotely creating branches will be denied
-#   in the repository.  By default this is allowed.
-#
-
-# --- Command line
-refname="$1"
-oldrev="$2"
-newrev="$3"
-
-# --- Safety check
-if [ -z "$GIT_DIR" ]; then
-	echo "Don't run this script from the command line." >&2
-	echo " (if you want, you could supply GIT_DIR then run" >&2
-	echo "  $0 <ref> <oldrev> <newrev>)" >&2
-	exit 1
-fi
-
-if [ -z "$refname" -o -z "$oldrev" -o -z "$newrev" ]; then
-	echo "usage: $0 <ref> <oldrev> <newrev>" >&2
-	exit 1
-fi
-
-# --- Config
-allowunannotated=$(git config --type=bool hooks.allowunannotated)
-allowdeletebranch=$(git config --type=bool hooks.allowdeletebranch)
-denycreatebranch=$(git config --type=bool hooks.denycreatebranch)
-allowdeletetag=$(git config --type=bool hooks.allowdeletetag)
-allowmodifytag=$(git config --type=bool hooks.allowmodifytag)
-
-# check for no description
-projectdesc=$(sed -e '1q' "$GIT_DIR/description")
-case "$projectdesc" in
-"Unnamed repository"* | "")
-	echo "*** Project description file hasn't been set" >&2
-	exit 1
-	;;
-esac
-
-# --- Check types
-# if $newrev is 0000...0000, it's a commit to delete a ref.
-zero=$(git hash-object --stdin </dev/null | tr '[0-9a-f]' '0')
-if [ "$newrev" = "$zero" ]; then
-	newrev_type=delete
-else
-	newrev_type=$(git cat-file -t $newrev)
-fi
-
-case "$refname","$newrev_type" in
-	refs/tags/*,commit)
-		# un-annotated tag
-		short_refname=${refname##refs/tags/}
-		if [ "$allowunannotated" != "true" ]; then
-			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
-			echo "*** Use 'git tag [ -a | -s ]' for tags you want to propagate." >&2
-			exit 1
-		fi
-		;;
-	refs/tags/*,delete)
-		# delete tag
-		if [ "$allowdeletetag" != "true" ]; then
-			echo "*** Deleting a tag is not allowed in this repository" >&2
-			exit 1
-		fi
-		;;
-	refs/tags/*,tag)
-		# annotated tag
-		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
-		then
-			echo "*** Tag '$refname' already exists." >&2
-			echo "*** Modifying a tag is not allowed in this repository." >&2
-			exit 1
-		fi
-		;;
-	refs/heads/*,commit)
-		# branch
-		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then
-			echo "*** Creating a branch is not allowed in this repository" >&2
-			exit 1
-		fi
-		;;
-	refs/heads/*,delete)
-		# delete branch
-		if [ "$allowdeletebranch" != "true" ]; then
-			echo "*** Deleting a branch is not allowed in this repository" >&2
-			exit 1
-		fi
-		;;
-	refs/remotes/*,commit)
-		# tracking branch
-		;;
-	refs/remotes/*,delete)
-		# delete tracking branch
-		if [ "$allowdeletebranch" != "true" ]; then
-			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
-			exit 1
-		fi
-		;;
-	*)
-		# Anything else (is there anything else?)
-		echo "*** Update hook: unknown type of update to ref $refname of type $newrev_type" >&2
-		exit 1
-		;;
-esac
-
-# --- Finished
-exit 0
-
-FILE: .git/index
-Kind: binary
-Size: 6263
-Last modified: 2026-01-20T13:53:31.471814+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 6263
-detected type: unknown
-
-FILE: .git/info/exclude
-Kind: text
-Size: 240
-Last modified: 2026-01-20T07:01:55.702058+00:00
-
-CONTENT:
-# git ls-files --others --exclude-from=.git/info/exclude
-# Lines that start with '#' are comments.
-# For a project mostly in C, the following would be a good set of
-# exclude patterns (uncomment them if you want to use them):
-# *.[oa]
-# *~
-
-FILE: .git/logs/HEAD
-Kind: text
-Size: 715
-Last modified: 2026-01-20T13:53:31.427815+00:00
-
-CONTENT:
-0000000000000000000000000000000000000000 c76b8a7c7e17f3752566b17ace4dd87889660908 Codex <codex@openai.com> 1768892516 +0000	checkout: moving from master to work
-c76b8a7c7e17f3752566b17ace4dd87889660908 0000000000000000000000000000000000000000 Codex <codex@openai.com> 1768917211 +0000	Branch: renamed refs/heads/work to refs/heads/old_work-1768917208
-0000000000000000000000000000000000000000 c76b8a7c7e17f3752566b17ace4dd87889660908 Codex <codex@openai.com> 1768917211 +0000	Branch: renamed refs/heads/work to refs/heads/old_work-1768917208
-c76b8a7c7e17f3752566b17ace4dd87889660908 8e965b6429e839bfe74091cb41721308255fca12 Codex <codex@openai.com> 1768917211 +0000	checkout: moving from old_work-1768917208 to work
-
-FILE: .git/logs/refs/heads/work
-Kind: text
-Size: 156
-Last modified: 2026-01-20T13:53:31.427815+00:00
-
-CONTENT:
-0000000000000000000000000000000000000000 8e965b6429e839bfe74091cb41721308255fca12 Codex <codex@openai.com> 1768917211 +0000	branch: Created from FETCH_HEAD
-
-FILE: .git/objects/00/f1f3894d0208b5956d66d0a21808d20a69265c
-Kind: binary
-Size: 410
-Last modified: 2026-01-20T13:53:31.359816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 410
-detected type: unknown
-
-FILE: .git/objects/0f/07f8f92027b7430666d53ac042c34ca6f7940e
-Kind: binary
-Size: 410
-Last modified: 2026-01-20T13:53:31.347816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 410
-detected type: unknown
-
-FILE: .git/objects/11/093babff05fe82b756da40086739ccd28fffe2
-Kind: binary
-Size: 951
-Last modified: 2026-01-20T13:53:31.323816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 951
-detected type: unknown
-
-FILE: .git/objects/11/8623066910d226e08436061084196071197ea7
-Kind: binary
-Size: 51
-Last modified: 2026-01-20T13:53:31.355816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 51
-detected type: unknown
-
-FILE: .git/objects/18/d3c22712584d510b48e230f3fea33314b2e8ba
-Kind: binary
-Size: 51
-Last modified: 2026-01-20T13:53:31.359816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 51
-detected type: unknown
-
-FILE: .git/objects/1c/a88be3afc0e6f521be1cab512decef2a9e3398
-Kind: binary
-Size: 1635
-Last modified: 2026-01-20T13:53:31.343816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 1635
-detected type: unknown
-
-FILE: .git/objects/27/f67bfc822ae33ac6638913e5f26fc36d13c2df
-Kind: binary
-Size: 573
-Last modified: 2026-01-20T13:53:31.327816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 573
-detected type: unknown
-
-FILE: .git/objects/30/a7037f84f0e3acd9770ead68385516ec63eed3
-Kind: binary
-Size: 292
-Last modified: 2026-01-20T13:53:31.335816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 292
-detected type: unknown
-
-FILE: .git/objects/34/a5f4700ef3ba5c89fe8cb131521280ce7ddce3
-Kind: binary
-Size: 482
-Last modified: 2026-01-20T13:53:31.351816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 482
-detected type: unknown
-
-FILE: .git/objects/3c/34aa33b2ded8a285cd2d2c074489c17fa53f33
-Kind: binary
-Size: 143
-Last modified: 2026-01-20T13:53:31.359816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 143
-detected type: unknown
-
-FILE: .git/objects/41/7d9aff9fac533feb31958958652d5c99abe455
-Kind: binary
-Size: 954
-Last modified: 2026-01-20T13:53:31.323816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 954
-detected type: unknown
-
-FILE: .git/objects/4a/09cca8592af5088ebd4045fa71c1ac3461406d
-Kind: binary
-Size: 143
-Last modified: 2026-01-20T13:53:31.367815+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 143
-detected type: unknown
-
-FILE: .git/objects/4b/1bdf8568d03c8b5970fa94d62146d89cb249c1
-Kind: binary
-Size: 51
-Last modified: 2026-01-20T13:53:31.367815+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 51
-detected type: unknown
-
-FILE: .git/objects/4d/fe985e9b2b61f0c2d29c48d6487777a3fa0974
-Kind: binary
-Size: 574
-Last modified: 2026-01-20T13:53:31.367815+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 574
-detected type: unknown
-
-FILE: .git/objects/54/8d490c22cf5ab31cfecaeab9c7ec2725355943
-Kind: binary
-Size: 410
-Last modified: 2026-01-20T13:53:31.363816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 410
-detected type: unknown
-
-FILE: .git/objects/58/317e2614fdf0ab63a70c59563781aa46ff51d0
-Kind: binary
-Size: 213
-Last modified: 2026-01-20T13:53:31.351816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 213
-detected type: unknown
-
-FILE: .git/objects/60/eb905063a5f0dadeea166ea0d020a103a233fd
-Kind: binary
-Size: 481
-Last modified: 2026-01-20T13:53:31.351816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 481
-detected type: unknown
-
-FILE: .git/objects/60/ef7814cea07c03f5bf7cfe5e9ee75d45ae7399
-Kind: binary
-Size: 763
-Last modified: 2026-01-20T13:53:31.363816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 763
-detected type: unknown
-
-FILE: .git/objects/62/d79202f3566222591deb60b79429717275c21d
-Kind: binary
-Size: 1757
-Last modified: 2026-01-20T13:53:31.331816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 1757
-detected type: unknown
-
-FILE: .git/objects/65/5cdcad2a9f28dc48684726c7ca0e8c1a0f6e91
-Kind: binary
-Size: 181
-Last modified: 2026-01-20T13:53:31.331816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 181
-detected type: unknown
-
-FILE: .git/objects/6a/1134c3a345130189e446085b927a32d87708ff
-Kind: binary
-Size: 214
-Last modified: 2026-01-20T13:53:31.359816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 214
-detected type: unknown
-
-FILE: .git/objects/6d/620aa316bff6f7929dca8deb38da38225672e3
-Kind: binary
-Size: 238
-Last modified: 2026-01-20T13:53:31.335816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 238
-detected type: unknown
-
-FILE: .git/objects/6e/0e0c2bb1fbd4c464f781e947c5e75cb23d5244
-Kind: binary
-Size: 1777
-Last modified: 2026-01-20T13:53:31.363816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 1777
-detected type: unknown
-
-FILE: .git/objects/6e/5e85e0c26a9d7b0d51c136e6ca3b55f0db44a7
-Kind: binary
-Size: 802
-Last modified: 2026-01-20T13:53:31.339816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 802
-detected type: unknown
-
-FILE: .git/objects/6e/cd5b474d60d771ab2cb0bc6b98f4c6bc819347
-Kind: binary
-Size: 455
-Last modified: 2026-01-20T13:53:31.347816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 455
-detected type: unknown
-
-FILE: .git/objects/72/6e3b37fd2aea01a12e5647e6542240bed9cb09
-Kind: binary
-Size: 233
-Last modified: 2026-01-20T13:53:31.327816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 233
-detected type: unknown
-
-FILE: .git/objects/76/2d2eb7e6aa1144f785cd285cb9c97f19166f43
-Kind: binary
-Size: 183
-Last modified: 2026-01-20T13:53:31.323816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 183
-detected type: unknown
-
-FILE: .git/objects/7b/d76e448e2b4945577d9bf1acb293a44d260de3
-Kind: binary
-Size: 414
-Last modified: 2026-01-20T13:53:31.351816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 414
-detected type: unknown
-
-FILE: .git/objects/7b/d7bf4c502d7c05c17338e3b4a89cb78ee00515
-Kind: binary
-Size: 828
-Last modified: 2026-01-20T13:53:31.335816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 828
-detected type: unknown
-
-FILE: .git/objects/84/91c860cecbf4b84ab178a5d4b774c7cd2697e4
-Kind: binary
-Size: 973
-Last modified: 2026-01-20T13:53:31.355816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 973
-detected type: unknown
-
-FILE: .git/objects/8b/2156373efd139ecdb48704ff3e4a408aa29d04
-Kind: binary
-Size: 247
-Last modified: 2026-01-20T13:53:31.339816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 247
-detected type: unknown
-
-FILE: .git/objects/8e/965b6429e839bfe74091cb41721308255fca12
-Kind: binary
-Size: 946
-Last modified: 2026-01-20T13:53:31.319816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 946
-detected type: unknown
-
-FILE: .git/objects/92/2a9bafa643eb991634b97e7b561661d9139126
-Kind: binary
-Size: 572
-Last modified: 2026-01-20T13:53:31.355816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 572
-detected type: unknown
-
-FILE: .git/objects/9c/ce8992c65b2a38a81bcc8b18d54f996e847bdd
-Kind: binary
-Size: 203
-Last modified: 2026-01-20T13:53:31.331816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 203
-detected type: unknown
-
-FILE: .git/objects/9d/0018ced08a1e285f73ff7dcea47a1b9f84b294
-Kind: binary
-Size: 214
-Last modified: 2026-01-20T13:53:31.363816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 214
-detected type: unknown
-
-FILE: .git/objects/a3/29b093830c669ebcbb2bb1ed1330a4ec65b978
-Kind: binary
-Size: 51
-Last modified: 2026-01-20T13:53:31.327816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 51
-detected type: unknown
-
-FILE: .git/objects/a5/8516191009cd265e20d03d16356fbcf2a0abd4
-Kind: binary
-Size: 474
-Last modified: 2026-01-20T13:53:31.363816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 474
-detected type: unknown
-
-FILE: .git/objects/ac/5a1fcc20775898adbe993f0c28d42cde33e766
-Kind: binary
-Size: 456
-Last modified: 2026-01-20T13:53:31.339816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 456
-detected type: unknown
-
-FILE: .git/objects/ac/b9856d494bab326d3ec48b14c1a7e3b7224d2c
-Kind: binary
-Size: 463
-Last modified: 2026-01-20T13:53:31.347816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 463
-detected type: unknown
-
-FILE: .git/objects/b5/03742da0f85f5510af17103b278bc82516a900
-Kind: binary
-Size: 186
-Last modified: 2026-01-20T13:53:31.355816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 186
-detected type: unknown
-
-FILE: .git/objects/b5/8579777a5a26995da1e0376e9813163733e42b
-Kind: binary
-Size: 190
-Last modified: 2026-01-20T13:53:31.323816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 190
-detected type: unknown
-
-FILE: .git/objects/be/b70f86b62b93f7eb130c7ad37de04706d79da9
-Kind: binary
-Size: 474
-Last modified: 2026-01-20T13:53:31.347816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 474
-detected type: unknown
-
-FILE: .git/objects/d0/2fd244143ee9c3e3f628958d70004391a5ce07
-Kind: binary
-Size: 82
-Last modified: 2026-01-20T13:53:31.327816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 82
-detected type: unknown
-
-FILE: .git/objects/d0/8f3c0a046f07972824596280f33d642f1a4012
-Kind: binary
-Size: 780
-Last modified: 2026-01-20T13:53:31.351816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 780
-detected type: unknown
-
-FILE: .git/objects/d0/e35baa7c334bc355d43af18a6f76c2c6f7e692
-Kind: binary
-Size: 733
-Last modified: 2026-01-20T13:53:31.359816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 733
-detected type: unknown
-
-FILE: .git/objects/d0/f03571e3575b3798a91c0fdd9be8e33b6c44b6
-Kind: binary
-Size: 1228
-Last modified: 2026-01-20T13:53:31.339816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 1228
-detected type: unknown
-
-FILE: .git/objects/d3/d44026a76c68271c79b119763a7ababba263af
-Kind: binary
-Size: 1565
-Last modified: 2026-01-20T13:53:31.331816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 1565
-detected type: unknown
-
-FILE: .git/objects/d6/c90a533a8091180f58c7d0ca8234f1dab9c846
-Kind: binary
-Size: 83
-Last modified: 2026-01-20T13:53:31.355816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 83
-detected type: unknown
-
-FILE: .git/objects/e1/04af5dbd607ca5e9f6e34c99f86214c699f622
-Kind: binary
-Size: 936
-Last modified: 2026-01-20T13:53:31.323816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 936
-detected type: unknown
-
-FILE: .git/objects/ec/51961d6fb705a2b71aa2a1a5d92fbcc0dc781c
-Kind: binary
-Size: 657
-Last modified: 2026-01-20T13:53:31.347816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 657
-detected type: unknown
-
-FILE: .git/objects/ee/17cb5c1bfd5fb1df6a7eac3fef3019c801b690
-Kind: binary
-Size: 1413
-Last modified: 2026-01-20T13:53:31.343816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 1413
-detected type: unknown
-
-FILE: .git/objects/f9/4588c40c8b262e555321590c1fb5684f042483
-Kind: binary
-Size: 116
-Last modified: 2026-01-20T13:53:31.335816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 116
-detected type: unknown
-
-FILE: .git/objects/f9/5076afd1667aa5755a53e9237d406d555f082b
-Kind: binary
-Size: 163
-Last modified: 2026-01-20T13:53:31.367815+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 163
-detected type: unknown
-
-FILE: .git/objects/fa/3d632c2cd5e722eb31c6c8f5dc07b36eb5ecd7
-Kind: binary
-Size: 435
-Last modified: 2026-01-20T13:53:31.351816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 435
-detected type: unknown
-
-FILE: .git/objects/fa/966eac8282ffa8da204cc02007b871cc912a43
-Kind: binary
-Size: 574
-Last modified: 2026-01-20T13:53:31.359816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 574
-detected type: unknown
-
-FILE: .git/objects/fc/8122e2ab2e9d2e3430a19f158bb71e2481640e
-Kind: binary
-Size: 192
-Last modified: 2026-01-20T13:53:31.327816+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 192
-detected type: unknown
-
-FILE: .git/objects/pack/pack-e37421529fb54870d8e275e3039a244c7b87e337.idx
-Kind: binary
-Size: 4488
-Last modified: 2026-01-20T07:01:56.467157+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 4488
-detected type: unknown
-
-FILE: .git/objects/pack/pack-e37421529fb54870d8e275e3039a244c7b87e337.pack
-Kind: binary
-Size: 56047
-Last modified: 2026-01-20T07:01:56.467157+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 56047
-detected type: unknown
-
-FILE: .git/objects/pack/pack-e37421529fb54870d8e275e3039a244c7b87e337.rev
-Kind: binary
-Size: 540
-Last modified: 2026-01-20T07:01:56.483436+00:00
-
-CONTENT:
-BINARY FILE — NOT DISPLAYED
-file size: 540
-detected type: unknown
-
-FILE: .git/packed-refs
-Kind: text
-Size: 46
-Last modified: 2026-01-20T13:53:31.455814+00:00
-
-CONTENT:
-# pack-refs with: peeled fully-peeled sorted 
-
-FILE: .git/refs/heads/work
-Kind: text
-Size: 41
-Last modified: 2026-01-20T13:53:31.427815+00:00
-
-CONTENT:
-8e965b6429e839bfe74091cb41721308255fca12
-
 FILE: .github/workflows/ci.yml
 Kind: text
 Size: 381
-Last modified: 2026-01-20T13:53:31.423815+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 name: CI
@@ -1907,7 +119,7 @@ jobs:
 FILE: .github/workflows/physics.yml
 Kind: text
 Size: 265
-Last modified: 2026-01-20T13:53:31.423815+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 name: physics
@@ -1931,7 +143,7 @@ jobs:
 FILE: .gitignore
 Kind: text
 Size: 210
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Python
@@ -1963,7 +175,7 @@ telemetry/
 FILE: CHANGELOG.md
 Kind: text
 Size: 192
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Changelog
@@ -1976,7 +188,7 @@ CONTENT:
 FILE: CODE_OF_CONDUCT.md
 Kind: text
 Size: 350
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Code of Conduct
@@ -1993,7 +205,7 @@ the project maintainers.
 FILE: COMMERCIAL.md
 Kind: text
 Size: 740
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Commercial Licensing
@@ -2014,7 +226,7 @@ Email theoutervoid@outlook.com to discuss commercial terms and obtain written pe
 FILE: CONTRIBUTING.md
 Kind: text
 Size: 517
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Contributing
@@ -2040,7 +252,7 @@ Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md).
 FILE: LICENSE
 Kind: text
 Size: 296
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 This project is dual-licensed.
@@ -2053,7 +265,7 @@ See the README for details and contact theoutervoid@outlook.com for commercial l
 FILE: LICENSE-APACHE
 Kind: text
 Size: 11357
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
                                  Apache License
@@ -2261,7 +473,7 @@ CONTENT:
 FILE: LICENSE-COMMERCIAL
 Kind: text
 Size: 1239
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 Proprietary Commercial License
@@ -2291,7 +503,7 @@ To obtain a commercial license, contact: theoutervoid@outlook.com
 FILE: NOTICE
 Kind: text
 Size: 142
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 BLUX Commander
@@ -2301,8 +513,8 @@ This product includes software licensed under the Apache License 2.0. See LICENS
 
 FILE: README.md
 Kind: text
-Size: 3881
-Last modified: 2026-01-20T13:53:31.423815+00:00
+Size: 4041
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 # BLUX Commander
@@ -2314,9 +526,10 @@ The bridge between mind and machine. The map that moves.
 ## Overview
 
 BLUX Commander delivers a unified read-only observability cockpit for the BLUX ecosystem. It is
-**not a control plane** and performs **no execution**. Developers and operators can visualize
-traces, audits, envelope payloads, execution_manifest records, guard_receipt artifacts, and
-system status without triggering actions.
+**not a control plane** and performs **no execution**, **no enforcement**, and **no tokens**.
+Developers and operators can visualize envelopes, guard_receipt artifacts, execution_manifest
+records, audits/logs, and system status without triggering actions. Inputs are files and artifacts
+produced by other repos; BLUX Commander does not generate them.
 
 ### Highlights
 
@@ -2347,7 +560,7 @@ system status without triggering actions.
 │   │   ├── commander.py
 │   │   ├── config.py
 │   │   ├── plugins.py
-│   │   ├── shell.py
+│   │   ├── terminal.py
 │   │   ├── telemetry.py
 │   │   └── tui.py
 │   ├── integrations
@@ -2365,8 +578,6 @@ system status without triggering actions.
 │   │       ├── default.tcss
 │   │       └── highcontrast.tcss
 │   └── web
-│       ├── auth.py
-│       ├── commands.py
 │       ├── insights.py
 │       ├── server.py
 │       ├── static
@@ -2399,7 +610,7 @@ system status without triggering actions.
 └── tests
     ├── test_cli.py
     ├── test_plugins.py
-    ├── test_shell.py
+    ├── test_terminal.py
     ├── test_tui.py
     └── test_web_dashboard.py
 ```
@@ -2432,14 +643,15 @@ Open <http://127.0.0.1:8000/> to access the React + Tailwind UI.
 
 ## Scope / Non-goals
 
-BLUX Commander is a read-only observability cockpit. It is **not a control plane** and performs **no
-execution**, **no enforcement**, and **no tokens**. See [docs/ROLE.md](docs/ROLE.md) for the full
+BLUX Commander is a read-only observability cockpit. It is **not a control plane** and performs
+**no execution**, **no enforcement**, and **no tokens**. Inputs are file-based artifacts produced
+by other repos; Commander does not generate them. See [docs/ROLE.md](docs/ROLE.md) for the full
 scope and boundary checks.
 
 FILE: blux_commander/__init__.py
 Kind: text
 Size: 345
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """BLUX Commander package initialization."""
@@ -2461,8 +673,8 @@ def get_version() -> str:
 
 FILE: blux_commander/cli.py
 Kind: text
-Size: 2220
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Size: 2084
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 """Typer-based command line interface for BLUX Commander."""
@@ -2471,7 +683,7 @@ from __future__ import annotations
 
 import typer
 
-from blux_commander.core import api, commander, plugins, shell, telemetry, tui
+from blux_commander.core import api, commander, plugins, telemetry, tui
 
 app = typer.Typer(help="BLUX Commander — Unified Cockpit")
 cmd_app = typer.Typer(help="Commander control surface")
@@ -2493,13 +705,6 @@ def dashboard() -> None:
     """Launch the Textual dashboard."""
 
     tui.launch_dashboard()
-
-
-@cmd_app.command(name="shell")
-def shell_cmd() -> None:
-    """Start the AI developer shell."""
-
-    shell.start_interactive()
 
 
 @cmd_app.command()
@@ -2551,11 +756,11 @@ if __name__ == "__main__":  # pragma: no cover
 
 FILE: blux_commander/core/api.py
 Kind: text
-Size: 1703
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Size: 1501
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
-"""FastAPI service exposing commander orchestration."""
+"""FastAPI service exposing commander observability."""
 
 from __future__ import annotations
 
@@ -2594,14 +799,6 @@ async def status() -> dict[str, dict[str, str]]:
     return {"subsystems": commander.state.subsystems}
 
 
-@app.post("/commands")
-async def execute(command: str) -> JSONResponse:
-    """Execute a named workflow command."""
-
-    commander.add_workflow(command)
-    return JSONResponse({"accepted": command})
-
-
 @app.get("/metrics")
 async def metrics() -> JSONResponse:
     """Expose Prometheus metrics."""
@@ -2618,7 +815,7 @@ def run(host: str = "127.0.0.1", port: int = 8000, reload: bool = False) -> None
 FILE: blux_commander/core/commander.py
 Kind: text
 Size: 2038
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Core orchestration hub for BLUX Commander."""
@@ -2695,7 +892,7 @@ def bootstrap() -> None:
 FILE: blux_commander/core/config.py
 Kind: text
 Size: 1555
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Configuration management utilities."""
@@ -2762,7 +959,7 @@ def _read_yaml(path: Path) -> Dict[str, Any]:
 FILE: blux_commander/core/plugins.py
 Kind: text
 Size: 934
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Plugin discovery and lifecycle management."""
@@ -2803,35 +1000,10 @@ def _discover_plugins() -> Iterable[str]:
     for entry_point in metadata.entry_points().select(group=PLUGIN_NAMESPACE):
         yield entry_point.name
 
-FILE: blux_commander/core/shell.py
-Kind: text
-Size: 590
-Last modified: 2026-01-20T13:53:31.427815+00:00
-
-CONTENT:
-"""Read-only shell stubs for BLUX Commander."""
-
-from __future__ import annotations
-
-from pathlib import Path
-from typing import Iterable
-
-
-def start_interactive(commands: Iterable[str] | None = None) -> None:
-    """Reject interactive shells in read-only mode."""
-
-    raise RuntimeError("Interactive shells are disabled in the read-only observability cockpit.")
-
-
-def run_command(command: str, *, cwd: str | Path | None = None) -> None:
-    """Reject command execution in read-only mode."""
-
-    raise RuntimeError("Command execution is disabled in the read-only observability cockpit.")
-
 FILE: blux_commander/core/telemetry.py
 Kind: text
 Size: 1445
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Telemetry stubs for BLUX Commander."""
@@ -2880,10 +1052,35 @@ def load_history(limit: int | None = None) -> Iterable[dict[str, object]]:
                 break
             yield json.loads(line)
 
+FILE: blux_commander/core/terminal.py
+Kind: text
+Size: 615
+Last modified: 2026-01-21T07:55:52Z
+
+CONTENT:
+"""Read-only terminal stubs for BLUX Commander."""
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Iterable
+
+
+def start_interactive(commands: Iterable[str] | None = None) -> None:
+    """Reject interactive terminal sessions in read-only mode."""
+
+    raise RuntimeError("Interactive terminal sessions are disabled in the read-only observability cockpit.")
+
+
+def run_command(command: str, *, cwd: str | Path | None = None) -> None:
+    """Reject command execution in read-only mode."""
+
+    raise RuntimeError("Command execution is disabled in the read-only observability cockpit.")
+
 FILE: blux_commander/core/tui.py
 Kind: text
 Size: 1369
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Textual dashboard launcher."""
@@ -2930,7 +1127,7 @@ def launch_dashboard() -> None:
 FILE: blux_commander/integrations/ca.py
 Kind: text
 Size: 243
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """cA integration stub."""
@@ -2948,7 +1145,7 @@ def register() -> None:
 FILE: blux_commander/integrations/doctrine.py
 Kind: text
 Size: 256
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Doctrine integration stub."""
@@ -2966,7 +1163,7 @@ def register() -> None:
 FILE: blux_commander/integrations/quantum.py
 Kind: text
 Size: 258
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Quantum integration stub."""
@@ -2984,7 +1181,7 @@ def register() -> None:
 FILE: blux_commander/ui/panels/ai_panel.py
 Kind: text
 Size: 280
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """AI panel widget."""
@@ -3003,7 +1200,7 @@ class AIPanel(Static):
 FILE: blux_commander/ui/panels/logs_panel.py
 Kind: text
 Size: 237
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Logs panel widget."""
@@ -3022,7 +1219,7 @@ class LogsPanel(Static):
 FILE: blux_commander/ui/panels/plugins_panel.py
 Kind: text
 Size: 442
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Plugins panel widget."""
@@ -3048,7 +1245,7 @@ class PluginsPanel(Static):
 FILE: blux_commander/ui/panels/telemetry_panel.py
 Kind: text
 Size: 491
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Telemetry panel widget."""
@@ -3073,8 +1270,8 @@ class TelemetryPanel(Static):
 
 FILE: blux_commander/ui/panels/terminal_panel.py
 Kind: text
-Size: 406
-Last modified: 2026-01-20T07:01:56.524135+00:00
+Size: 395
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 """Terminal panel widget."""
@@ -3095,12 +1292,12 @@ class TerminalPanel(Static):
     """
 
     def on_mount(self) -> None:
-        self.update("Terminal ready. Use the shell command to interact.")
+        self.update("Terminal ready. Read-only view enabled.")
 
 FILE: blux_commander/ui/themes/default.tcss
 Kind: text
 Size: 224
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 #cockpit {
@@ -3124,7 +1321,7 @@ CONTENT:
 FILE: blux_commander/ui/themes/highcontrast.tcss
 Kind: text
 Size: 113
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 * {
@@ -3137,141 +1334,10 @@ CONTENT:
     color: #000000;
 }
 
-FILE: blux_commander/web/auth.py
-Kind: text
-Size: 1014
-Last modified: 2026-01-20T13:53:31.427815+00:00
-
-CONTENT:
-"""Read-only authentication stubs for the BLUX Commander dashboard."""
-
-from __future__ import annotations
-
-from dataclasses import dataclass
-from typing import Optional
-
-@dataclass
-class KeyPair:
-    """Simple representation of a local authentication keypair."""
-
-    public_key: str
-    private_key: str
-
-
-class AuthManager:
-    """Provide read-only authentication placeholders without tokens."""
-
-    def __init__(self) -> None:
-        self._keypair: Optional[KeyPair] = None
-
-    # ------------------------------------------------------------------
-    def ensure_keypair(self) -> KeyPair:
-        if self._keypair is None:
-            self._keypair = KeyPair(public_key="read-only", private_key="")
-        return self._keypair
-
-    def require(self, token: Optional[str]) -> KeyPair:
-        _ = token
-        return self.ensure_keypair()
-
-
-def authenticate_header(token: Optional[str], manager: AuthManager) -> KeyPair:
-    """FastAPI dependency for read-only access."""
-
-    return manager.require(token)
-
-FILE: blux_commander/web/commands.py
-Kind: text
-Size: 2531
-Last modified: 2026-01-20T13:53:31.427815+00:00
-
-CONTENT:
-"""Read-only command stubs for the dashboard."""
-
-from __future__ import annotations
-
-import time
-from dataclasses import dataclass
-from typing import AsyncIterator, List, Optional
-
-from .storage import StorageManager, build_memory_entry
-
-
-@dataclass
-class CommandResult:
-    """Structured outcome of a command request."""
-
-    command: str
-    repo: Optional[str]
-    exit_code: int
-    output: List[str]
-    error: List[str]
-    duration_seconds: float
-
-    def as_dict(self) -> dict:
-        return {
-            "command": self.command,
-            "repo": self.repo,
-            "exit_code": self.exit_code,
-            "output": self.output,
-            "error": self.error,
-            "duration_seconds": self.duration_seconds,
-        }
-
-
-class CommandExecutor:
-    """Reject command execution in read-only mode."""
-
-    def __init__(self, storage: StorageManager) -> None:
-        self.storage = storage
-        self.cli_path: Optional[str] = None
-
-    # ------------------------------------------------------------------
-    def execute(self, command: str, repo: Optional[str] = None) -> CommandResult:
-        start = time.perf_counter()
-        message = "Command execution is disabled in the read-only observability cockpit."
-        result = CommandResult(
-            command=command,
-            repo=repo,
-            exit_code=501,
-            output=[],
-            error=[message],
-            duration_seconds=time.perf_counter() - start,
-        )
-        self._record(result)
-        return result
-
-    async def stream(self, command: str, repo: Optional[str] = None) -> AsyncIterator[dict]:
-        message = "Command execution is disabled in the read-only observability cockpit."
-        result = CommandResult(
-            command=command,
-            repo=repo,
-            exit_code=501,
-            output=[],
-            error=[message],
-            duration_seconds=0.0,
-        )
-        self._record(result)
-        yield {"type": "error", "message": message}
-        yield {"type": "exit", "code": result.exit_code, "duration": result.duration_seconds}
-
-    # ------------------------------------------------------------------
-    def _record(self, result: CommandResult) -> None:
-        entry = build_memory_entry(
-            command=result.command,
-            repo=result.repo,
-            exit_code=result.exit_code,
-            output=result.output,
-            error=result.error,
-            duration_seconds=result.duration_seconds,
-        )
-        self.storage.append_memory(entry)
-
-
 FILE: blux_commander/web/insights.py
 Kind: text
 Size: 4015
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Repository insights and dashboard aggregation utilities."""
@@ -3415,8 +1481,8 @@ def _count_files(path: Path, *, file_limit: int = 5000) -> Optional[int]:
 
 FILE: blux_commander/web/server.py
 Kind: text
-Size: 4833
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Size: 1260
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 """BLUX Commander web dashboard server."""
@@ -3424,47 +1490,22 @@ CONTENT:
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Optional
 
-from fastapi import Depends, FastAPI, Header, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
 from blux_commander.core import commander, plugins
 
-from .auth import AuthManager, KeyPair
-from .commands import CommandExecutor
-from .insights import RepoIndex, RepoRecord
-from .storage import StorageManager, default_storage_dir
+from .storage import default_storage_dir
 
 
 BASE_DIR = default_storage_dir()
-storage_manager = StorageManager(BASE_DIR)
-auth_manager = AuthManager()
-repo_index = RepoIndex(storage_manager)
-command_executor = CommandExecutor(storage_manager)
 
 app = FastAPI(title="BLUX Commander Web Dashboard", version="0.2.0")
 app.mount("/static", StaticFiles(directory=Path(__file__).parent / "static"), name="static")
 
 INDEX_FILE = Path(__file__).parent / "templates" / "index.html"
-
-
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
-def get_token_header(x_blux_key: Optional[str] = Header(default=None)) -> Optional[str]:
-    return x_blux_key
-
-
-def require_auth(token: Optional[str] = Depends(get_token_header)) -> KeyPair:
-    return auth_manager.require(token)
-
-
-# ---------------------------------------------------------------------------
-# Routes
-# ---------------------------------------------------------------------------
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -3476,141 +1517,52 @@ async def index() -> HTMLResponse:
 
 @app.get("/api/status")
 async def status() -> dict:
-    keypair = auth_manager.ensure_keypair()
     return {
         "app": "blux-commander",
         "version": app.version,
         "cli_available": False,
         "config_dir": str(BASE_DIR),
-        "public_key": keypair.public_key,
         "subsystems": commander.state.subsystems,
     }
 
 
-@app.get("/api/auth/keypair")
-async def auth_keypair() -> dict:
-    keypair = auth_manager.ensure_keypair()
-    return {"public_key": keypair.public_key, "mode": "read-only"}
-
-
-@app.post("/api/auth/session")
-async def auth_session(payload: dict) -> dict:
-    _ = payload.get("token")
-    return {"status": "ok", "mode": "read-only"}
-
-
-@app.get("/api/commands/memory")
-async def command_memory(_: KeyPair = Depends(require_auth)) -> dict:
-    return {"entries": storage_manager.list_memory(limit=100)}
-
-
-@app.post("/api/commands/execute")
-async def command_execute(payload: dict, _: KeyPair = Depends(require_auth)) -> dict:
-    command = payload.get("command")
-    repo = payload.get("repo")
-    if not command:
-        raise HTTPException(status_code=400, detail="Command is required")
-    result = command_executor.execute(command, repo)
-    return {"result": result.as_dict()}
-
-
-@app.websocket("/ws/commands")
-async def commands_socket(websocket: WebSocket) -> None:
-    _ = websocket.query_params.get("token")
-    await websocket.accept()
-    try:
-        while True:
-            message = await websocket.receive_json()
-            command = message.get("command")
-            repo = message.get("repo")
-            if not command:
-                await websocket.send_json({"type": "error", "message": "Command is required"})
-                continue
-            async for chunk in command_executor.stream(command, repo):
-                await websocket.send_json(chunk)
-    except WebSocketDisconnect:
-        return
-
-
-@app.get("/api/repos")
-async def list_repos(_: KeyPair = Depends(require_auth)) -> dict:
-    insights = [insight.as_dict() for insight in repo_index.collect_insights()]
-    return {"repos": insights}
-
-
-@app.post("/api/repos")
-async def add_repo(payload: dict, _: KeyPair = Depends(require_auth)) -> dict:
-    name = payload.get("name")
-    path = payload.get("path")
-    description = payload.get("description")
-    if not name or not path:
-        raise HTTPException(status_code=400, detail="name and path are required")
-    repo_index.upsert_record(RepoRecord(name=name, path=path, description=description))
-    return {"status": "ok"}
-
-
-@app.delete("/api/repos/{name}")
-async def delete_repo(name: str, _: KeyPair = Depends(require_auth)) -> dict:
-    repo_index.remove_record(name)
-    return {"status": "ok"}
-
-
 @app.get("/api/plugins")
-async def list_plugins(_: KeyPair = Depends(require_auth)) -> dict:
+async def list_plugins() -> dict:
     discovered = plugins.list_registered(verbose=False)
     return {"plugins": discovered}
 
-
-@app.get("/api/memory/replay")
-async def memory_replay(_: KeyPair = Depends(require_auth)) -> dict:
-    return {"entries": storage_manager.list_memory(limit=200)}
-
 FILE: blux_commander/web/static/app.js
 Kind: text
-Size: 22381
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Size: 5296
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
-import React, { useCallback, useEffect, useRef, useState } from "https://esm.sh/react@18.3.1";
+import React, { useEffect, useMemo, useState } from "https://esm.sh/react@18.3.1";
 import { createRoot } from "https://esm.sh/react-dom@18.3.1/client";
 
 const h = React.createElement;
 const API_BASE = `${window.location.origin}/api`;
 
-function useLocalStorage(key, initialValue) {
-  const [value, setValue] = useState(() => {
-    try {
-      const stored = window.localStorage.getItem(key);
-      return stored ?? initialValue;
-    } catch (error) {
-      console.warn("Unable to access localStorage", error);
-      return initialValue;
-    }
-  });
+const ARTIFACT_TYPES = [
+  {
+    name: "envelope",
+    summary: "Serialized payload envelopes emitted by upstream subsystems.",
+  },
+  {
+    name: "guard_receipt",
+    summary: "Guard receipts emitted by upstream audit pipelines.",
+  },
+  {
+    name: "execution_manifest",
+    summary: "Execution manifests generated by external orchestration layers.",
+  },
+  {
+    name: "audits",
+    summary: "Audit and log bundles published by external systems.",
+  },
+];
 
-  const setItem = useCallback(
-    (next) => {
-      setValue((prev) => {
-        const resolved = typeof next === "function" ? next(prev) : next;
-        try {
-          if (resolved === null || resolved === undefined) {
-            window.localStorage.removeItem(key);
-          } else {
-            window.localStorage.setItem(key, resolved);
-          }
-        } catch (error) {
-          console.warn("Failed to persist localStorage value", error);
-        }
-        return resolved;
-      });
-    },
-    [key],
-  );
-
-  return [value, setItem];
-}
-
-function SectionCard({ title, description, actions, children }) {
+function SectionCard({ title, description, children }) {
   return h(
     "section",
     { className: "rounded-xl border border-slate-800 bg-slate-900/60 p-6 shadow-lg shadow-slate-950/40" },
@@ -3618,606 +1570,145 @@ function SectionCard({ title, description, actions, children }) {
       "div",
       { className: "mb-4 flex flex-col gap-2 md:flex-row md:items-center md:justify-between" },
       h("div", {}, h("h2", { className: "text-xl font-semibold" }, title), description && h("p", { className: "text-sm text-slate-400" }, description)),
-      actions && h("div", { className: "flex items-center gap-2" }, actions),
     ),
     children,
   );
 }
 
-function Button({ children, onClick, type = "button", variant = "default", disabled }) {
-  const styles =
-    variant === "secondary"
-      ? "border border-slate-700 bg-slate-800 hover:bg-slate-700"
-      : variant === "ghost"
-        ? "hover:bg-slate-800"
-        : "bg-primary-500 hover:bg-primary-400 text-slate-950";
-  return h(
-    "button",
-    {
-      type,
-      onClick,
-      disabled,
-      className: `inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-400 disabled:cursor-not-allowed disabled:opacity-60 ${styles}`,
-    },
-    children,
-  );
-}
+function useApi(path, fallback) {
+  const [state, setState] = useState({ loading: true, data: fallback, error: null });
 
-function useAuthenticatedFetch(token) {
-  return useCallback(
-    async (path, options = {}) => {
-      const headers = new Headers(options.headers || {});
-      if (token) {
-        headers.set("X-BLUX-Key", token);
-      }
-      const response = await fetch(`${API_BASE}${path}`, { ...options, headers });
-      if (!response.ok) {
-        const errorBody = await response.json().catch(() => ({}));
-        throw new Error(errorBody.detail || `Request failed with status ${response.status}`);
-      }
-      return response.json();
-    },
-    [token],
-  );
-}
-
-function useBootstrap() {
-  const [bootstrap, setBootstrap] = useState({ loading: true, data: null, error: null });
   useEffect(() => {
     let active = true;
-    fetch(`${API_BASE}/auth/keypair`)
+    fetch(`${API_BASE}${path}`)
       .then((resp) => resp.json())
       .then((data) => {
-        if (active) setBootstrap({ loading: false, data, error: null });
+        if (active) setState({ loading: false, data, error: null });
       })
       .catch((error) => {
-        console.error("Failed to load keypair", error);
-        if (active) setBootstrap({ loading: false, data: null, error });
+        console.error("Failed to load", path, error);
+        if (active) setState({ loading: false, data: fallback, error });
       });
     return () => {
       active = false;
     };
-  }, []);
-  return bootstrap;
+  }, [path, fallback]);
+
+  return state;
 }
 
-function CommandConsole({ token, onExecuted }) {
-  const [command, setCommand] = useState("plugins list");
-  const [repo, setRepo] = useState("");
-  const [result, setResult] = useState(null);
-  const [streamMessages, setStreamMessages] = useState([]);
-  const [streaming, setStreaming] = useState(false);
-  const wsRef = useRef(null);
-  const fetcher = useAuthenticatedFetch(token);
+function StatusSummary({ status }) {
+  if (status.loading) {
+    return h("p", { className: "text-sm text-slate-400" }, "Loading status...");
+  }
+  if (status.error) {
+    return h("p", { className: "text-sm text-rose-300" }, "Status unavailable.");
+  }
 
-  const connectSocket = useCallback(() => {
-    if (!token) return;
-    const wsUrl = new URL(`${window.location.origin.replace(/^http/, "ws")}/ws/commands`);
-    wsUrl.searchParams.set("token", token);
-    const socket = new WebSocket(wsUrl);
-    socket.onopen = () => {
-      setStreamMessages((messages) => [...messages, { type: "system", message: "Connected to command stream" }]);
-    };
-    socket.onmessage = (event) => {
-      try {
-        const payload = JSON.parse(event.data);
-        setStreamMessages((messages) => [...messages, payload]);
-        if (payload.type === "exit") {
-          setStreaming(false);
-        }
-      } catch (error) {
-        console.warn("Unable to parse websocket payload", error);
-      }
-    };
-    socket.onclose = () => {
-      setStreamMessages((messages) => [...messages, { type: "system", message: "Stream disconnected" }]);
-    };
-    socket.onerror = () => {
-      setStreamMessages((messages) => [...messages, { type: "error", message: "Stream error" }]);
-    };
-    wsRef.current = socket;
-  }, [token]);
-
-  useEffect(() => {
-    connectSocket();
-    return () => {
-      if (wsRef.current) {
-        wsRef.current.close();
-      }
-    };
-  }, [connectSocket]);
-
-  const runCommand = useCallback(
-    async (event) => {
-      event.preventDefault();
-      if (!command) return;
-      try {
-        const body = { command, repo: repo || null };
-        const response = await fetcher("/commands/execute", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body),
-        });
-        setResult(response.result);
-        onExecuted?.();
-      } catch (error) {
-        setResult({ error: [error.message], output: [], exit_code: 1, command });
-      }
-    },
-    [command, repo, fetcher, onExecuted],
+  return h(
+    "div",
+    { className: "grid gap-3 text-sm text-slate-300 md:grid-cols-2" },
+    h("div", {}, h("span", { className: "text-slate-500" }, "Version"), h("div", { className: "font-medium" }, status.data.version)),
+    h("div", {}, h("span", { className: "text-slate-500" }, "Config directory"), h("div", { className: "font-medium" }, status.data.config_dir)),
   );
+}
 
-  const runStreaming = useCallback(() => {
-    if (!command || !wsRef.current || wsRef.current.readyState !== WebSocket.OPEN) {
-      setStreamMessages((messages) => [...messages, { type: "error", message: "Command stream unavailable" }]);
-      return;
-    }
-    setStreaming(true);
-    setStreamMessages((messages) => [
-      ...messages,
-      { type: "system", message: `→ ${command}${repo ? ` @ ${repo}` : ""}` },
-    ]);
-    wsRef.current.send(JSON.stringify({ command, repo: repo || null }));
-  }, [command, repo]);
-
-  return SectionCard(
-    {
-      title: "Command Center",
-      description: "Execute bq-cli commands and inspect plugin output in real-time.",
-      actions: h(
-        Button,
-        { variant: "secondary", onClick: runStreaming, disabled: !token || streaming },
-        streaming ? "Streaming..." : "Run Stream",
+function ArtifactList() {
+  const rows = useMemo(
+    () =>
+      ARTIFACT_TYPES.map((artifact) =>
+        h(
+          "div",
+          { key: artifact.name, className: "rounded-lg border border-slate-800 bg-slate-950/60 p-4" },
+          h("p", { className: "text-sm font-semibold text-slate-200" }, artifact.name),
+          h("p", { className: "mt-1 text-xs text-slate-400" }, artifact.summary),
+        ),
       ),
-    },
-    h(
-      "form",
-      { onSubmit: runCommand, className: "flex flex-col gap-4" },
+    [],
+  );
+  return h("div", { className: "grid gap-3 md:grid-cols-2" }, rows);
+}
+
+function PluginList({ plugins }) {
+  if (plugins.loading) {
+    return h("p", { className: "text-sm text-slate-400" }, "Loading plugins...");
+  }
+  if (plugins.error) {
+    return h("p", { className: "text-sm text-rose-300" }, "Plugin inventory unavailable.");
+  }
+  if (!plugins.data.plugins || plugins.data.plugins.length === 0) {
+    return h("p", { className: "text-sm text-slate-400" }, "No plugins registered.");
+  }
+  return h(
+    "ul",
+    { className: "flex flex-col gap-2 text-sm text-slate-300" },
+    plugins.data.plugins.map((plugin) =>
       h(
-        "div",
-        { className: "grid gap-4 md:grid-cols-[1fr_minmax(0,200px)_auto]" },
-        h("input", {
-          className: "w-full rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm",
-          placeholder: "Command (e.g., plugins list)",
-          value: command,
-          onChange: (event) => setCommand(event.target.value),
-        }),
-        h("input", {
-          className: "rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm",
-          placeholder: "Repository path (optional)",
-          value: repo,
-          onChange: (event) => setRepo(event.target.value),
-        }),
-        h(Button, { type: "submit", disabled: !token }, "Run once"),
-      ),
-      result &&
-        h(
-          "div",
-          { className: "grid gap-4 md:grid-cols-2" },
-          h(ResultBlock, { title: "stdout", lines: result.output || [] }),
-          h(ResultBlock, { title: "stderr", lines: result.error || [] }),
-        ),
-      h(StreamLog, { messages: streamMessages }),
-    ),
-  );
-}
-
-function ResultBlock({ title, lines }) {
-  if (!lines.length) {
-    return h(
-      "div",
-      { className: "rounded-lg border border-slate-800 bg-slate-950/80 p-3" },
-      h("p", { className: "text-xs uppercase tracking-wide text-slate-500" }, title),
-      h("p", { className: "mt-2 text-sm text-slate-500" }, "No output"),
-    );
-  }
-  return h(
-    "div",
-    { className: "rounded-lg border border-slate-800 bg-slate-950/80 p-3" },
-    h("p", { className: "text-xs uppercase tracking-wide text-slate-500" }, title),
-    h(
-      "pre",
-      { className: "mt-2 overflow-x-auto whitespace-pre-wrap break-words text-sm leading-relaxed" },
-      lines.join("\n"),
-    ),
-  );
-}
-
-function StreamLog({ messages }) {
-  if (!messages.length) return null;
-  return h(
-    "div",
-    { className: "rounded-lg border border-slate-800 bg-slate-950/80 p-3" },
-    h("p", { className: "text-xs uppercase tracking-wide text-slate-500" }, "Live Stream"),
-    h(
-      "div",
-      { className: "mt-3 max-h-60 space-y-2 overflow-y-auto text-sm" },
-      messages.map((message, index) =>
-        h(
-          "div",
-          { key: index, className: message.type === "error" ? "text-red-400" : "text-slate-200" },
-          h("span", { className: "mr-2 text-xs uppercase text-slate-500" }, message.type || "log"),
-          message.message || JSON.stringify(message),
-        ),
+        "li",
+        { key: plugin.name || plugin.path, className: "rounded-lg border border-slate-800 bg-slate-950/60 p-3" },
+        h("p", { className: "font-medium" }, plugin.name || "Unnamed plugin"),
+        plugin.path && h("p", { className: "text-xs text-slate-500" }, plugin.path),
       ),
     ),
   );
 }
 
-function RepoInsights({ token, onRefresh, data, refreshSignal = 0 }) {
-  const fetcher = useAuthenticatedFetch(token);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+function App() {
+  const status = useApi("/status", {});
+  const plugins = useApi("/plugins", { plugins: [] });
 
-  const refresh = useCallback(async () => {
-    if (!token) return;
-    setLoading(true);
-    setError(null);
-    try {
-      const response = await fetcher("/repos");
-      onRefresh(response.repos);
-    } catch (err) {
-      setError(err);
-    } finally {
-      setLoading(false);
-    }
-  }, [token, fetcher, onRefresh]);
-
-  useEffect(() => {
-    refresh();
-  }, [refresh, refreshSignal]);
-
-  return SectionCard(
-    {
-      title: "Repository Insights",
-      description: "Track multiple BLUX project workspaces and git health.",
-      actions: h(Button, { variant: "secondary", onClick: refresh, disabled: loading || !token }, loading ? "Refreshing" : "Refresh"),
-    },
-    h(
-      "div",
-      { className: "grid gap-4" },
-      error && h("p", { className: "text-sm text-red-400" }, error.message),
-      (data || []).length === 0 && !loading
-        ? h(
-            "div",
-            { className: "rounded-lg border border-dashed border-slate-800 p-4 text-sm text-slate-400" },
-            "No repositories registered yet. Use the form below to add one.",
-          )
-        : (data || []).map((repo) => h(RepoCard, { key: repo.name, repo })),
-    ),
-  );
-}
-
-function RepoCard({ repo }) {
-  return h(
-    "article",
-    { className: "rounded-lg border border-slate-800 bg-slate-950/80 p-4" },
-    h("div", { className: "flex items-start justify-between" }, h("h3", { className: "text-lg font-semibold" }, repo.name), h("span", { className: "rounded-full bg-primary-500/10 px-3 py-1 text-xs font-medium text-primary-300" }, repo.branch || "unknown")),
-    repo.description && h("p", { className: "mt-2 text-sm text-slate-400" }, repo.description),
-    h(
-      "dl",
-      { className: "mt-4 grid grid-cols-2 gap-4 text-sm" },
-      h(StatCell, { label: "Dirty", value: repo.dirty ? "Yes" : "No" }),
-      h(StatCell, { label: "Ahead", value: repo.ahead_commits ?? "–" }),
-      h(StatCell, { label: "Tracked files", value: repo.tracked_files ?? "–" }),
-      h(StatCell, { label: "Size", value: repo.size_bytes ? formatBytes(repo.size_bytes) : "–" }),
-      h(StatCell, { label: "Latest", value: repo.latest_commit ?? "–", wide: true }),
-      h(StatCell, { label: "Path", value: repo.path, wide: true }),
-    ),
-  );
-}
-
-function StatCell({ label, value, wide }) {
   return h(
     "div",
-    { className: `rounded-md border border-slate-800 bg-slate-950/60 p-3 ${wide ? "col-span-2" : ""}` },
-    h("dt", { className: "text-xs uppercase tracking-wide text-slate-500" }, label),
-    h("dd", { className: "mt-1 text-sm text-slate-200" }, value),
-  );
-}
-
-function formatBytes(bytes) {
-  if (!bytes) return "0 B";
-  const units = ["B", "KB", "MB", "GB", "TB"];
-  let index = 0;
-  let value = bytes;
-  while (value >= 1024 && index < units.length - 1) {
-    value /= 1024;
-    index += 1;
-  }
-  return `${value.toFixed(1)} ${units[index]}`;
-}
-
-function PluginRegistry({ token }) {
-  const [plugins, setPlugins] = useState([]);
-  const [error, setError] = useState(null);
-  const fetcher = useAuthenticatedFetch(token);
-
-  const refresh = useCallback(async () => {
-    if (!token) return;
-    setError(null);
-    try {
-      const response = await fetcher("/plugins");
-      setPlugins(response.plugins || []);
-    } catch (err) {
-      setError(err);
-    }
-  }, [token, fetcher]);
-
-  useEffect(() => {
-    refresh();
-  }, [refresh]);
-
-  return SectionCard(
-    {
-      title: "Plugin Registry",
-      description: "Discover installed BLUX extensions registered via entry points.",
-      actions: h(Button, { variant: "secondary", onClick: refresh, disabled: !token }, "Refresh"),
-    },
-    error && h("p", { className: "text-sm text-red-400" }, error.message),
+    { className: "min-h-screen bg-slate-950 text-slate-100" },
     h(
-      "ul",
-      { className: "mt-4 space-y-2 text-sm" },
-      plugins.length === 0
-        ? h("li", { className: "text-slate-400" }, "No plugins detected. Register entry points via 'blux.plugins'.")
-        : plugins.map((plugin) => h("li", { key: plugin, className: "rounded-md border border-slate-800 bg-slate-950/60 px-3 py-2" }, plugin)),
-    ),
-  );
-}
-
-function MemoryReplay({ entries }) {
-  return SectionCard(
-    {
-      title: "Memory Replay",
-      description: "Chronological view of recent command executions stored locally.",
-    },
-    entries.length === 0
-      ? h("p", { className: "text-sm text-slate-400" }, "No command memory recorded yet. Execute commands to populate history." )
-      : h(
-          "div",
-          { className: "space-y-4" },
-          entries.map((entry, index) =>
-            h(
-              "article",
-              { key: index, className: "rounded-lg border border-slate-800 bg-slate-950/70 p-4" },
-              h("header", { className: "flex flex-wrap items-center justify-between gap-2" },
-                h("span", { className: "rounded-md bg-primary-500/10 px-2 py-1 text-xs font-medium text-primary-300" }, entry.command),
-                h("time", { className: "text-xs text-slate-500" }, entry.timestamp),
-              ),
-              entry.repo && h("p", { className: "mt-2 text-xs text-slate-400" }, `Repo: ${entry.repo}`),
-              h(
-                "div",
-                { className: "mt-3 grid gap-3 md:grid-cols-2" },
-                h(ResultBlock, { title: "stdout", lines: entry.output || [] }),
-                h(ResultBlock, { title: "stderr", lines: entry.error || [] }),
-              ),
-              h(
-                "p",
-                { className: "mt-2 text-xs text-slate-500" },
-                `Exit ${entry.exit_code} · ${typeof entry.duration_seconds === "number" ? entry.duration_seconds.toFixed(2) : "0.00"}s`,
-              ),
-            ),
-          ),
-        ),
-  );
-}
-
-function RepoForm({ token, onAdded }) {
-  const [name, setName] = useState("");
-  const [path, setPath] = useState("");
-  const [description, setDescription] = useState("");
-  const [error, setError] = useState(null);
-  const fetcher = useAuthenticatedFetch(token);
-
-  const submit = useCallback(
-    async (event) => {
-      event.preventDefault();
-      if (!name || !path) {
-        setError(new Error("Name and path are required"));
-        return;
-      }
-      setError(null);
-      try {
-        await fetcher("/repos", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, path, description: description || null }),
-        });
-        setName("");
-        setPath("");
-        setDescription("");
-        onAdded?.();
-      } catch (err) {
-        setError(err);
-      }
-    },
-    [name, path, description, fetcher, onAdded],
-  );
-
-  return SectionCard(
-    {
-      title: "Add Repository",
-      description: "Register a local BLUX project to include it in insights.",
-    },
-    h(
-      "form",
-      { className: "grid gap-4 md:grid-cols-3", onSubmit: submit },
-      h("input", {
-        className: "rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm",
-        placeholder: "Display name",
-        value: name,
-        onChange: (event) => setName(event.target.value),
-      }),
-      h("input", {
-        className: "rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm",
-        placeholder: "Path to repo",
-        value: path,
-        onChange: (event) => setPath(event.target.value),
-      }),
-      h(Button, { type: "submit", disabled: !token }, "Add"),
-      h("textarea", {
-        className: "col-span-3 min-h-[80px] rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm",
-        placeholder: "Optional description", value: description,
-        onChange: (event) => setDescription(event.target.value),
-      }),
-      error && h("p", { className: "col-span-3 text-sm text-red-400" }, error.message),
-    ),
-  );
-}
-
-function AuthenticationPanel({ bootstrap, token, setToken }) {
-  const [input, setInput] = useState(token || "");
-  const [status, setStatus] = useState(null);
-
-  const submit = useCallback(
-    async (event) => {
-      event.preventDefault();
-      if (!input) return;
-      try {
-        const response = await fetch(`${API_BASE}/auth/session`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ token: input }),
-        });
-        if (!response.ok) {
-          const errorBody = await response.json().catch(() => ({}));
-          throw new Error(errorBody.detail || "Authentication failed");
-        }
-        setToken(input);
-        setStatus("Authenticated");
-      } catch (error) {
-        setStatus(error.message);
-      }
-    },
-    [input, setToken],
-  );
-
-  return SectionCard(
-    {
-      title: "Local Keypair Authentication",
-      description: "Paste the private key stored under ~/.config/blux-commander/keypair.json to unlock the dashboard.",
-      actions: bootstrap.data &&
+      "main",
+      { className: "mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10" },
+      h(
+        "header",
+        { className: "flex flex-col gap-3" },
+        h("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-slate-500" }, "BLUX Commander"),
+        h("h1", { className: "text-3xl font-semibold" }, "Read-only observability cockpit"),
         h(
-          "a",
-          {
-            className: "text-xs font-medium text-primary-300 hover:text-primary-200",
-            href: "#",
-            onClick: (event) => {
-              event.preventDefault();
-              navigator.clipboard?.writeText(bootstrap.data.public_key || "");
-              setStatus("Public key copied");
-            },
-          },
-          "Copy public key",
-        ),
-    },
-    h(
-      "form",
-      { className: "flex flex-col gap-4", onSubmit: submit },
-      h("p", { className: "text-sm text-slate-300" }, "Your private key never leaves this device. Keys are generated automatically when the server starts."),
-      bootstrap.loading
-        ? h("p", { className: "text-sm text-slate-400" }, "Generating keypair…")
-        : bootstrap.error
-          ? h("p", { className: "text-sm text-red-400" }, "Failed to bootstrap keypair. Check server logs.")
-          : h(
-              "div",
-              { className: "grid gap-3 md:grid-cols-[1fr_auto]" },
-              h("input", {
-                className: "w-full rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm",
-                placeholder: "Private key",
-                value: input,
-                onChange: (event) => setInput(event.target.value.trim()),
-              }),
-              h(Button, { type: "submit" }, "Unlock"),
-              h(
-                "p",
-                { className: "md:col-span-2 text-xs text-slate-500" },
-                `Keys stored at ${bootstrap.data?.config_dir ?? '~/.config/blux-commander'}`,
-              ),
-            ),
-      status && h("p", { className: "text-xs text-slate-400" }, status),
-    ),
-  );
-}
-
-function Dashboard() {
-  const bootstrap = useBootstrap();
-  const [token, setToken] = useLocalStorage("blux-commander-key", "");
-  const [repos, setRepos] = useState([]);
-  const [memory, setMemory] = useState([]);
-  const [repoSignal, setRepoSignal] = useState(0);
-
-  const fetcher = useAuthenticatedFetch(token);
-
-  const refreshMemory = useCallback(async () => {
-    if (!token) return;
-    try {
-      const response = await fetcher("/memory/replay");
-      setMemory(response.entries || []);
-    } catch (error) {
-      console.warn("Failed to refresh memory", error);
-    }
-  }, [token, fetcher]);
-
-  useEffect(() => {
-    refreshMemory();
-  }, [refreshMemory]);
-
-  const statusBanner = bootstrap.data
-    ? h(
-        "div",
-        { className: "rounded-xl border border-primary-500/20 bg-primary-500/10 px-6 py-4" },
-        h("p", { className: "text-sm text-primary-100" }, "BLUX Commander is ready. Authenticate to access orchestration tools."),
-      )
-    : null;
-
-  return h(
-    "main",
-    { className: "mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-8 px-6 py-10" },
-    h(
-      "header",
-      { className: "flex flex-col gap-4 md:flex-row md:items-center md:justify-between" },
-      h("div", {}, h("h1", { className: "text-3xl font-bold" }, "BLUX Commander"), h("p", { className: "text-sm text-slate-400" }, "Unified cockpit for orchestrating BLUX projects.")),
-      bootstrap.data && h("span", { className: "rounded-full bg-slate-800 px-4 py-2 text-xs text-slate-300" }, `Public key: ${bootstrap.data.public_key.slice(0, 8)}…`),
-    ),
-    statusBanner,
-    h(AuthenticationPanel, { bootstrap, token, setToken }),
-    token
-      ? h(
-          React.Fragment,
-          {},
-          h(CommandConsole, { token, onExecuted: refreshMemory }),
-          h(RepoForm, {
-            token,
-            onAdded: () => {
-              setRepoSignal((value) => value + 1);
-              setTimeout(() => {
-                refreshMemory();
-              }, 100);
-            },
-          }),
-          h(RepoInsights, { token, data: repos, onRefresh: setRepos, refreshSignal: repoSignal }),
-          h(PluginRegistry, { token }),
-          h(MemoryReplay, { entries: memory }),
-        )
-      : h(
           "p",
-          { className: "text-sm text-slate-400" },
-          "Authenticate with your private key to load project insights, command history, and live orchestration tools.",
+          { className: "max-w-2xl text-sm text-slate-400" },
+          "Commander surfaces observability artifacts produced by other systems. It does not generate artifacts or perform actions.",
         ),
+      ),
+      h(
+        SectionCard,
+        {
+          title: "Status",
+          description: "Live health summary from the read-only cockpit.",
+        },
+        h(StatusSummary, { status }),
+      ),
+      h(
+        SectionCard,
+        {
+          title: "Artifact inventory",
+          description: "Artifact categories rendered by the cockpit.",
+        },
+        h(ArtifactList),
+      ),
+      h(
+        SectionCard,
+        {
+          title: "Plugins",
+          description: "Registered read-only integrations and views.",
+        },
+        h(PluginList, { plugins }),
+      ),
+    ),
   );
 }
 
-const container = document.getElementById("root");
-if (container) {
-  const root = createRoot(container);
-  root.render(h(Dashboard));
-}
+const root = createRoot(document.getElementById("root"));
+root.render(h(App));
 
 FILE: blux_commander/web/static/assets/style.css
 Kind: text
-Size: 3322
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Size: 3353
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 :root {
@@ -4330,7 +1821,8 @@ section.panel h2 {
 }
 
 .filter label {
-  display: block;
+  display: flex;
+  flex-direction: column;
   font-weight: 600;
   margin-bottom: 0.35rem;
 }
@@ -4345,7 +1837,7 @@ section.panel h2 {
 }
 
 .filter small {
-  display: block;
+  display: inline-flex;
   margin-top: 0.5rem;
   color: #9da7bc;
 }
@@ -4461,7 +1953,7 @@ pre {
 FILE: blux_commander/web/storage.py
 Kind: text
 Size: 3911
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Local-first storage helpers for the BLUX Commander dashboard."""
@@ -4588,7 +2080,7 @@ def build_memory_entry(
 FILE: blux_commander/web/templates/index.html
 Kind: text
 Size: 1492
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 <!DOCTYPE html>
@@ -4638,8 +2130,8 @@ CONTENT:
 
 FILE: docs/API.md
 Kind: text
-Size: 901
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Size: 615
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 # API Reference
@@ -4658,18 +2150,14 @@ CONTENT:
 The FastAPI service exposes the following read-only endpoints:
 
 - `GET /api/status` – returns subsystem status snapshot.
-- `GET /api/repos` – lists configured repository insights.
-- `POST /api/commands/execute` – returns a read-only rejection payload (no execution).
-- `GET /api/commands/memory` – lists recent command requests.
-- `GET /api/memory/replay` – replays stored command request metadata.
 - `GET /api/plugins` – lists registered plugin metadata.
 
 Refer to module docstrings for additional handler descriptions.
 
 FILE: docs/ARCHITECTURE.md
 Kind: text
-Size: 1332
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Size: 1338
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 # Architecture
@@ -4681,7 +2169,7 @@ presentation, and data feeds.
 
 - **Commander Hub (`blux_commander/core/commander.py`)** – Maintains runtime context for
   observability artifacts.
-- **Shell (`blux_commander/core/shell.py`)** – Disabled placeholder that rejects execution.
+- **Terminal (`blux_commander/core/terminal.py`)** – Disabled placeholder that rejects execution.
 - **TUI (`blux_commander/core/tui.py`)** – Exposes Textual-powered cockpit panes.
 - **API (`blux_commander/core/api.py`)** – Hosts FastAPI services for read-only dashboards.
 - **Telemetry (`blux_commander/core/telemetry.py`)** – Records metrics and audit trails.
@@ -4706,7 +2194,7 @@ snapshots to avoid mutating system state.
 FILE: docs/CONFIGURATION.md
 Kind: text
 Size: 602
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Configuration
@@ -4739,7 +2227,7 @@ plugins:
 FILE: docs/INSTALL.md
 Kind: text
 Size: 622
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Installation
@@ -4769,7 +2257,7 @@ The editable install registers the `bluxq` command-line entry point.
 FILE: docs/INTEGRATIONS.md
 Kind: text
 Size: 801
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Integrations
@@ -4793,8 +2281,8 @@ execute commands, enforce policy, or mutate system state.
 
 FILE: docs/OPERATIONS.md
 Kind: text
-Size: 755
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Size: 758
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 # Operations
@@ -4816,13 +2304,13 @@ Use `bluxq cmd` to access read-only views:
 
 ## Read-Only Guardrails
 
-Commander does not launch shells, execute commands, or issue tokens. It only renders observability
+Commander does not launch terminals, execute commands, or issue tokens. It only renders observability
 artifacts such as envelope, guard_receipt, execution_manifest, audits, and traces.
 
 FILE: docs/ROADMAP.md
 Kind: text
 Size: 682
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Roadmap
@@ -4847,7 +2335,7 @@ CONTENT:
 FILE: docs/ROLE.md
 Kind: text
 Size: 807
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # BLUX Commander Role
@@ -4885,8 +2373,8 @@ role-bleed keywords in code directories.
 
 FILE: docs/SECURITY.md
 Kind: text
-Size: 632
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Size: 635
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 # Security
@@ -4897,7 +2385,7 @@ BLUX Commander emphasizes safe-by-default observability.
 
 - **Least Privilege** – dashboards run without execution, enforcement, or token issuance.
 - **Auditability** – telemetry trails surface audits and traces for review.
-- **Isolation** – no shell execution or subprocess invocation is permitted.
+- **Isolation** – no terminal execution or subprocess invocation is permitted.
 - **Integrity** – plugins are metadata-only and do not mutate system state.
 
 ## Hardening Checklist
@@ -4909,7 +2397,7 @@ BLUX Commander emphasizes safe-by-default observability.
 FILE: docs/THEMES.md
 Kind: text
 Size: 429
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Themes
@@ -4929,7 +2417,7 @@ To apply a theme, set `BLUX_CMD_THEME=highcontrast` or adjust the configuration 
 FILE: docs/TROUBLESHOOTING.md
 Kind: text
 Size: 682
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 # Troubleshooting
@@ -4955,15 +2443,16 @@ JSONL telemetry snippet found in `~/.config/blux-commander/logs/` when filing su
 
 FILE: docs/index.md
 Kind: text
-Size: 706
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Size: 831
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 # BLUX Commander
 
 BLUX Commander is a read-only observability cockpit for the BLUX ecosystem. It is **not a control
-plane** and performs **no execution**. The UI focuses on visibility rather than actions or
-orchestration.
+plane** and performs **no execution**, **no enforcement**, and **no tokens**. The UI focuses on
+visibility rather than actions or orchestration. Inputs are files/artifacts produced by other repos;
+Commander does not generate them.
 
 ## Capabilities
 
@@ -4977,7 +2466,7 @@ See the full documentation tree for deployment, operations, and customization de
 FILE: mkdocs.yml
 Kind: text
 Size: 775
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 site_name: BLUX Commander Docs
@@ -5015,7 +2504,7 @@ markdown_extensions:
 FILE: pyproject.toml
 Kind: text
 Size: 1423
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 [build-system]
@@ -5081,7 +2570,7 @@ license-files = ["LICENSE", "LICENSE-APACHE", "LICENSE-COMMERCIAL", "NOTICE"]
 FILE: scripts/build_docs.sh
 Kind: text
 Size: 61
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 #!/usr/bin/env bash
@@ -5092,7 +2581,7 @@ mkdocs build --strict
 FILE: scripts/gen_filetree.py
 Kind: text
 Size: 1154
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Generate a repository file tree."""
@@ -5134,8 +2623,8 @@ if __name__ == "__main__":
 
 FILE: scripts/physics_tests.sh
 Kind: text
-Size: 1856
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Size: 1810
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 #!/usr/bin/env bash
@@ -5158,35 +2647,31 @@ for dir in blux_commander tests src app packages lib; do
   fi
 done
 
-exec_pattern='child_process|exec\(|spawn\(|subprocess|asyncio\\.create_subprocess|os\\.system|Runtime\\.getRuntime|ProcessBuilder|bash -c|sh -c|powershell|cmd\\.exe|sudo'
+exec_pattern='\bsubprocess\b|os\.system|exec\(|\bspawn\b|\bshell\b|child_process|pexpect|paramiko|\bsudo\b|\bsu\b'
+enforcement_pattern='\benforce\b|\ballow\b|\bblock\b|\bdeny\b|\bdecision\b|\bpolicy_engine\b|\bmoderation\b'
+trust_pattern='\btoken\b|\bcapability_token\b|\bsignature\b|\bverify\b|\bkey_id\b|\brevocation\b'
+contracts_pattern='/contracts/|envelope\.schema\.json|guard_receipt\.schema\.json|discernment_report\.schema\.json'
+
 if [[ "${#code_dirs[@]}" -gt 0 ]]; then
-  if rg -n -S "$exec_pattern" --glob '!.git/**' --glob '!scripts/physics_tests.sh' "${code_dirs[@]}"; then
+  if rg -n -S -i "$exec_pattern" --glob '!.git/**' "${code_dirs[@]}"; then
     report_error "Found command-execution primitives in code directories."
   fi
-fi
 
-mutation_pattern='iptables|mount\\s|chroot|setcap|cap_net_admin|ptrace|/proc/|/sys/'
-if [[ "${#code_dirs[@]}" -gt 0 ]]; then
-  if rg -n -S "$mutation_pattern" --glob '!.git/**' --glob '!scripts/physics_tests.sh' "${code_dirs[@]}"; then
-    report_error "Found state-mutation intent in code directories."
+  if rg -n -S -i "$enforcement_pattern" --glob '!.git/**' "${code_dirs[@]}"; then
+    report_error "Found enforcement or decision keywords in code directories."
   fi
-fi
 
-role_pattern='receipt engine|enforcement|policy engine|capability token|issue token|verify token|execute tool|runner|sandbox profile'
-if [[ "${#code_dirs[@]}" -gt 0 ]]; then
-  if rg -n -S -i "$role_pattern" "${code_dirs[@]}"; then
-    report_error "Found role-bleed keywords in code directories."
+  if rg -n -S -i "$trust_pattern" --glob '!.git/**' "${code_dirs[@]}"; then
+    report_error "Found token or trust keywords in code directories."
   fi
 fi
 
-responsibility_pattern='\\bguard\\b|\\breg\\b|\\blite\\b'
-if [[ "${#code_dirs[@]}" -gt 0 ]]; then
-  if rg -n -S -i "$responsibility_pattern" "${code_dirs[@]}"; then
-    report_error "Found Guard/Reg/Lite responsibility signals in code directories."
-  fi
-  if rg -n --files -g '*guard*' -g '*reg*' -g '*lite*' "${code_dirs[@]}"; then
-    report_error "Found Guard/Reg/Lite responsibility paths in code directories."
-  fi
+if rg -n -S -i "$contracts_pattern" --glob '!.git/**' --glob '!scripts/physics_tests.sh' .; then
+  report_error "Found contract schema artifacts or /contracts/ paths."
+fi
+
+if find . -type f \( -path "*/engine/*" -o -path "*/runner/*" -o -path "*/executor/*" -o -path "*/sandbox/*" \) -not -path "./.git/*" -print -quit | grep -q .; then
+  report_error "Found files under execution-oriented paths (engine/, runner/, executor/, sandbox/)."
 fi
 
 if [[ "$fail" -ne 0 ]]; then
@@ -5199,7 +2684,7 @@ echo "Physics tests passed."
 FILE: scripts/run_tui_demo.py
 Kind: text
 Size: 238
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Run the BLUX Commander TUI demo."""
@@ -5220,7 +2705,7 @@ if __name__ == "__main__":
 FILE: scripts/update_readme_filetree.py
 Kind: text
 Size: 892
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Update the README file tree section."""
@@ -5256,7 +2741,7 @@ if __name__ == "__main__":
 FILE: tests/test_cli.py
 Kind: text
 Size: 301
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Tests for CLI wiring."""
@@ -5276,7 +2761,7 @@ def test_status_command_runs() -> None:
 FILE: tests/test_plugins.py
 Kind: text
 Size: 198
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Tests for plugin discovery."""
@@ -5288,26 +2773,32 @@ def test_plugins_list_returns_list() -> None:
     result = plugins.list_registered()
     assert isinstance(result, list)
 
-FILE: tests/test_shell.py
+FILE: tests/test_terminal.py
 Kind: text
-Size: 283
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Size: 391
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
-"""Tests for shell utilities."""
+"""Tests for terminal utilities."""
 
-from blux_commander.core import shell
+import pytest
+
+from blux_commander.core import terminal
 
 
-def test_filtered_env_keys() -> None:
-    env = shell._filtered_env()  # type: ignore[attr-defined]
-    assert "PATH" in env
-    assert all(key in {"PATH", "HOME", "SHELL", "BLUX_CMD_VERBOSE"} for key in env)
+def test_terminal_rejects_interactive() -> None:
+    with pytest.raises(RuntimeError, match="read-only"):
+        terminal.start_interactive()
+
+
+def test_terminal_rejects_command_execution() -> None:
+    with pytest.raises(RuntimeError, match="read-only"):
+        terminal.run_command("status")
 
 FILE: tests/test_tui.py
 Kind: text
 Size: 172
-Last modified: 2026-01-20T07:01:56.528205+00:00
+Last modified: 2026-01-20T20:50:18Z
 
 CONTENT:
 """Tests for TUI dashboard."""
@@ -5320,8 +2811,8 @@ def test_dashboard_class_title() -> None:
 
 FILE: tests/test_web_dashboard.py
 Kind: text
-Size: 2583
-Last modified: 2026-01-20T13:53:31.427815+00:00
+Size: 1161
+Last modified: 2026-01-21T07:55:52Z
 
 CONTENT:
 from __future__ import annotations
@@ -5336,8 +2827,6 @@ from fastapi.testclient import TestClient
 
 MODULES_TO_CLEAR = [
     "blux_commander.web.server",
-    "blux_commander.web.auth",
-    "blux_commander.web.commands",
     "blux_commander.web.storage",
     "blux_commander.web.insights",
 ]
@@ -5348,6 +2837,7 @@ def client(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterator[TestClie
     config_dir = tmp_path / ".config" / "blux-commander"
     monkeypatch.setenv("BLUX_COMMANDER_HOME", str(config_dir))
     import importlib
+
     for module in MODULES_TO_CLEAR:
         sys.modules.pop(module, None)
     server = importlib.import_module("blux_commander.web.server")
@@ -5355,51 +2845,12 @@ def client(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterator[TestClie
         yield test_client
 
 
-def test_bootstrap_creates_keypair(client: TestClient) -> None:
-    response = client.get("/api/auth/keypair")
+def test_status_endpoint(client: TestClient) -> None:
+    response = client.get("/api/status")
     assert response.status_code == 200
     data = response.json()
-    assert "public_key" in data
-
-
-def test_protected_endpoints_allow_readonly_access(client: TestClient) -> None:
-    response = client.get("/api/repos")
-    assert response.status_code == 200
-
-
-def test_command_execution_records_memory(client: TestClient) -> None:
-    execute_response = client.post(
-        "/api/commands/execute",
-        json={"command": "plugins list"},
-    )
-    assert execute_response.status_code == 200
-    result = execute_response.json()["result"]
-    assert "exit_code" in result
-    assert result["command"] == "plugins list"
-    assert result["exit_code"] == 501
-
-    memory_response = client.get("/api/memory/replay")
-    assert memory_response.status_code == 200
-    entries = memory_response.json()["entries"]
-    assert entries, "memory should include executed command"
-    assert entries[0]["command"] == "plugins list"
-
-
-def test_repo_insights_roundtrip(client: TestClient, tmp_path: Path) -> None:
-    repo_dir = tmp_path / "example"
-    repo_dir.mkdir()
-    (repo_dir / "README.md").write_text("test", encoding="utf-8")
-
-    add_response = client.post(
-        "/api/repos",
-        json={"name": "Example", "path": str(repo_dir)},
-    )
-    assert add_response.status_code == 200
-
-    repos_response = client.get("/api/repos")
-    assert repos_response.status_code == 200
-    repos = repos_response.json()["repos"]
-    assert any(repo["name"] == "Example" for repo in repos)
+    assert data["app"] == "blux-commander"
+    assert "subsystems" in data
 
 
 def test_plugins_endpoint(client: TestClient) -> None:
@@ -5408,10 +2859,11 @@ def test_plugins_endpoint(client: TestClient) -> None:
     assert "plugins" in response.json()
 
 ## 4) Workflow Inventory (index only)
-- .github/workflows/ci.yml: none
-- .github/workflows/physics.yml: none
+- .github/workflows/ci.yml: push, pull_request
+- .github/workflows/physics.yml: push, pull_request
 
 ## 5) Search Index (raw results)
+
 subprocess:
 docs/SECURITY.md
 scripts/physics_tests.sh
@@ -5426,16 +2878,7 @@ spawn:
 scripts/physics_tests.sh
 
 shell:
-.git/hooks/push-to-checkout.sample
-README.md
-blux_commander/cli.py
-blux_commander/core/shell.py
-blux_commander/ui/panels/terminal_panel.py
-docs/ARCHITECTURE.md
-docs/OPERATIONS.md
-docs/SECURITY.md
 scripts/physics_tests.sh
-tests/test_shell.py
 
 child_process:
 scripts/physics_tests.sh
@@ -5455,12 +2898,13 @@ docs/INTEGRATIONS.md
 docs/ROADMAP.md
 docs/ROLE.md
 docs/SECURITY.md
+docs/index.md
 scripts/physics_tests.sh
 
 guard:
-.git/hooks/pre-rebase.sample
 README.md
 blux_commander/core/commander.py
+blux_commander/web/static/app.js
 docs/INTEGRATIONS.md
 docs/OPERATIONS.md
 docs/ROLE.md
@@ -5470,6 +2914,7 @@ scripts/physics_tests.sh
 receipt:
 README.md
 blux_commander/core/commander.py
+blux_commander/web/static/app.js
 docs/INTEGRATIONS.md
 docs/OPERATIONS.md
 docs/ROLE.md
@@ -5477,24 +2922,17 @@ docs/index.md
 scripts/physics_tests.sh
 
 token:
-.git/hooks/fsmonitor-watchman.sample
 README.md
-blux_commander/web/auth.py
-blux_commander/web/server.py
-blux_commander/web/static/app.js
 docs/OPERATIONS.md
 docs/ROLE.md
 docs/SECURITY.md
+docs/index.md
 scripts/physics_tests.sh
 
 signature:
-none
+scripts/physics_tests.sh
 
 verify:
-.git/hooks/pre-applypatch.sample
-.git/hooks/pre-commit.sample
-.git/hooks/pre-merge-commit.sample
-.git/hooks/pre-push.sample
 docs/ROLE.md
 scripts/physics_tests.sh
 
@@ -5502,13 +2940,14 @@ capability:
 scripts/physics_tests.sh
 
 key_id:
-none
+scripts/physics_tests.sh
 
 contract:
 LICENSE-APACHE
+scripts/physics_tests.sh
 
 schema:
-none
+scripts/physics_tests.sh
 
 $schema:
 none
@@ -5520,51 +2959,34 @@ router:
 none
 
 orchestr:
-blux_commander/core/api.py
 blux_commander/core/commander.py
 blux_commander/web/static/app.js
 docs/index.md
 
 execute:
-.git/hooks/push-to-checkout.sample
 LICENSE-APACHE
-blux_commander/core/api.py
-blux_commander/web/commands.py
-blux_commander/web/server.py
-blux_commander/web/static/app.js
-docs/API.md
 docs/INSTALL.md
 docs/INTEGRATIONS.md
 docs/OPERATIONS.md
 docs/ROLE.md
-scripts/physics_tests.sh
-tests/test_web_dashboard.py
 
 command:
-.git/FETCH_HEAD
-.git/hooks/fsmonitor-watchman.sample
-.git/hooks/pre-rebase.sample
-.git/hooks/update.sample
 README.md
 blux_commander/__init__.py
 blux_commander/cli.py
 blux_commander/core/api.py
 blux_commander/core/commander.py
 blux_commander/core/config.py
-blux_commander/core/shell.py
 blux_commander/core/telemetry.py
+blux_commander/core/terminal.py
 blux_commander/core/tui.py
 blux_commander/integrations/ca.py
 blux_commander/integrations/doctrine.py
 blux_commander/integrations/quantum.py
 blux_commander/ui/panels/plugins_panel.py
 blux_commander/ui/panels/telemetry_panel.py
-blux_commander/ui/panels/terminal_panel.py
-blux_commander/web/commands.py
 blux_commander/web/server.py
-blux_commander/web/static/app.js
 blux_commander/web/storage.py
-docs/API.md
 docs/ARCHITECTURE.md
 docs/CONFIGURATION.md
 docs/INSTALL.md
@@ -5580,7 +3002,7 @@ scripts/physics_tests.sh
 scripts/run_tui_demo.py
 tests/test_cli.py
 tests/test_plugins.py
-tests/test_shell.py
+tests/test_terminal.py
 tests/test_tui.py
 tests/test_web_dashboard.py
 
