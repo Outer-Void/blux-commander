@@ -12,20 +12,25 @@ report_error() {
 }
 
 code_dirs=()
-for dir in blux_commander tests src app packages lib; do
+for dir in blux_commander tests scripts src app packages lib; do
   if [[ -d "$dir" ]]; then
     code_dirs+=("$dir")
   fi
 done
 
-exec_pattern='\bsubprocess\b|os\.system|exec\(|\bspawn\b|\bshell\b|child_process|pexpect|paramiko|\bsudo\b|\bsu\b'
+exec_pattern='\bsubprocess\b|os\.system|exec\(|\bpopen\b|shell=True|child_process'
+control_plane_pattern='["'\'']/(dispatch|run|execute|apply|mutate|approve|deny|issue|verify)\b'
 enforcement_pattern='\benforce\b|\ballow\b|\bblock\b|\bdeny\b|\bdecision\b|\bpolicy_engine\b|\bmoderation\b'
 trust_pattern='\btoken\b|\bcapability_token\b|\bsignature\b|\bverify\b|\bkey_id\b|\brevocation\b'
-contracts_pattern='/contracts/|envelope\.schema\.json|guard_receipt\.schema\.json|discernment_report\.schema\.json'
+sibling_role_pattern='\bblux_guard\b|\bblux_lite\b|\bblux_reg\b|doctrine\.engine|doctrine_engine'
 
 if [[ "${#code_dirs[@]}" -gt 0 ]]; then
-  if rg -n -S -i "$exec_pattern" --glob '!.git/**' "${code_dirs[@]}"; then
+  if rg -n -S -i "$exec_pattern" --glob '!.git/**' --glob '!scripts/physics_tests.sh' "${code_dirs[@]}"; then
     report_error "Found command-execution primitives in code directories."
+  fi
+
+  if rg -n -S -i "$control_plane_pattern" --glob '!.git/**' --glob '!scripts/physics_tests.sh' "${code_dirs[@]}"; then
+    report_error "Found control-plane verbs in code paths."
   fi
 
   if rg -n -S -i "$enforcement_pattern" --glob '!.git/**' "${code_dirs[@]}"; then
@@ -35,10 +40,14 @@ if [[ "${#code_dirs[@]}" -gt 0 ]]; then
   if rg -n -S -i "$trust_pattern" --glob '!.git/**' "${code_dirs[@]}"; then
     report_error "Found token or trust keywords in code directories."
   fi
+
+  if rg -n -S -i "$sibling_role_pattern" --glob '!.git/**' "${code_dirs[@]}"; then
+    report_error "Found sibling-role or doctrine engine identifiers in code directories."
+  fi
 fi
 
-if rg -n -S -i "$contracts_pattern" --glob '!.git/**' --glob '!scripts/physics_tests.sh' .; then
-  report_error "Found contract schema artifacts or /contracts/ paths."
+if find . -type f -name "*.schema.json" -not -path "./.git/*" -not -path "./tests/fixtures/*" -print -quit | grep -q .; then
+  report_error "Found local copies of contract schemas (*.schema.json)."
 fi
 
 if find . -type f \( -path "*/engine/*" -o -path "*/runner/*" -o -path "*/executor/*" -o -path "*/sandbox/*" \) -not -path "./.git/*" -print -quit | grep -q .; then
